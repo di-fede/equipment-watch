@@ -1,0 +1,62 @@
+.top {
+    width: 100%;
+    height: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4rem;
+    color: #fff;
+
+    &__box {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 4rem 1fr;
+        align-items: center;
+        justify-items: center;
+        padding: 5rem 3rem;
+        margin: 3rem;
+        //   border-radius: 15px;
+        //   background-color: #2b2b2b;
+        border: 1px solid #2b2b2b;
+    }
+
+    &__location-container {
+        justify-self: start;
+        font-size: 1.6rem;
+    }
+
+    ////////////    Left  ///////////
+
+    &__left {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        justify-self: start;
+    }
+
+    &__product-type {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+    }
+
+    &__product-model {
+        grid-column: 1/2;
+
+        font-size: 3rem;
+        text-transform: uppercase;
+    }
+
+    ////////////    Right  ///////////
+
+    &__right {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__machineNumber {
+        font-size: 15rem;
+    }
+}

@@ -1,0 +1,36 @@
+html {
+    font-size: 62.5%;
+}
+body {
+    position: relative;
+    background-color: #000;
+}
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    height: 100vh;
+
+    @include respond(tab-land) {
+        font-size: 50%;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.preLoad {
+    transition: all 0.5s;
+    opacity: 0;
+}
+.visible {
+    opacity: 1;
+}

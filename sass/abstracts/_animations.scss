@@ -1,0 +1,158 @@
+@keyframes buttonHovR {
+    0% {
+        transform: translate(0%, 0%) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(10%, -50%) rotate(7deg);
+    }
+    100% {
+        transform: translate(0%, 0%) rotate(0deg);
+    }
+}
+@keyframes buttonHovL {
+    0% {
+        transform: translate(0%, 0%) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(-10%, -50%) rotate(-7deg);
+    }
+    100% {
+        transform: translate(0%, 0%) rotate(0deg);
+    }
+}
+
+//////  LUCKY SITE ///////
+/// =======================////
+///  Pointing finger - up and down ///
+@keyframes pointer {
+    0% {
+        transform: translate(-50%, 0);
+    }
+    50% {
+        transform: translate(-50%, 65%);
+    }
+    100% {
+        transform: tranlate(-50%, 0);
+    }
+}
+
+@keyframes animateLetter {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-16px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+////// MORE SITE ///////
+//===========================//
+@keyframes buttonScale {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+//////  More site shop all //////
+@keyframes shopButton {
+    0% {
+        transform: translate(0, 0) rotate(0);
+    }
+
+    90% {
+        transform: translate(-5.1rem, -0.33rem) rotate(-4deg);
+    }
+    100% {
+        transform: translate(-5rem, -0.325rem) rotate(-4deg);
+    }
+}
+
+@keyframes wiggle {
+    0% {
+        transform: translateY(1px);
+    }
+
+    20% {
+        transform: translate(-1px, -1px);
+    }
+
+    32% {
+        transform: translate(0);
+    }
+
+    48% {
+        transform: translate(0);
+    }
+
+    64% {
+        transform: translate(1px);
+    }
+
+    80% {
+        transform: translateY(-1px);
+    }
+
+    to {
+        transform: translate(0);
+    }
+}
+
+@keyframes MenuItemShow {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes MenuItemHide {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+        display: none;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
