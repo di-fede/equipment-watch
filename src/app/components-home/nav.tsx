@@ -15,7 +15,7 @@ export default function Nav() {
     return (
         <div className="nav">
             <div className="nav__container">
-                <div
+                <button
                     className="nav__mech nav__element"
                     onClick={() => scrollToSection("form-mechanical")}
                     style={{ cursor: "pointer" }}
@@ -28,7 +28,7 @@ export default function Nav() {
                             ></path>
                         </svg>
                     </div>
-                </div>
+                </button>
                 <div
                     className="nav__elec nav__element"
                     onClick={() => scrollToSection("form-electrical")}

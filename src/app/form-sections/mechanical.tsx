@@ -15,10 +15,10 @@ export default function Mechanical() {
             label2: "Not Moving",
         },
         {
-            value: "belt",
-            htmlFor: "belt",
-            label1: "Belt",
-            label2: "Not Moving",
+            value: "button",
+            htmlFor: "button",
+            label1: "Button",
+            label2: "Broken",
         },
     ];
     const [selected, setSelected] = useState<string[]>([]);
@@ -47,6 +47,18 @@ export default function Mechanical() {
                             checked={selected.includes(item.value)}
                             onChange={() => toggleSelection}
                         />
+                        <label
+                            className={`${
+                                selected.includes(item.value)
+                                    ? "backOrange"
+                                    : "backGrey"
+                            } element__label`}
+                            htmlFor={item.htmlFor}
+                        >
+                            {item.label1}
+                            <br />
+                            {item.label2}
+                        </label>
                     </div>
                 ))}
             </div>

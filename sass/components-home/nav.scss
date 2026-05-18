@@ -11,4 +11,9 @@
         grid-template-columns: repeat(3, 1fr);
         justify-items: center;
     }
+
+    &__element {
+        background-color: transparent;
+        border: none;
+    }
 }
