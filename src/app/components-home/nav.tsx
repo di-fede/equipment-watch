@@ -4,7 +4,11 @@ export default function Nav() {
     const scrollToSection = (id: string) => {
         const element = document.getElementById(id);
         if (element) {
-            element.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+            element.scrollIntoView({
+                behavior: "smooth",
+                inline: "start",
+                block: "nearest",
+            });
         }
     };
 
@@ -13,7 +17,7 @@ export default function Nav() {
             <div className="nav__container">
                 <div
                     className="nav__mech nav__element"
-                    onClick={() => scrollToSection("form-physical")}
+                    onClick={() => scrollToSection("form-mechanical")}
                     style={{ cursor: "pointer" }}
                 >
                     <div className="nav__svg-container">
@@ -27,7 +31,7 @@ export default function Nav() {
                 </div>
                 <div
                     className="nav__elec nav__element"
-                    onClick={() => scrollToSection("form-mechanical")}
+                    onClick={() => scrollToSection("form-electrical")}
                     style={{ cursor: "pointer" }}
                 >
                     <div className="nav__svg-container">
@@ -41,7 +45,7 @@ export default function Nav() {
                 </div>
                 <div
                     className="nav__cosm nav__element"
-                    onClick={() => scrollToSection("form-cosmetic")}
+                    onClick={() => scrollToSection("form-physical")}
                     style={{ cursor: "pointer" }}
                 >
                     <div className="nav__svg-container">
