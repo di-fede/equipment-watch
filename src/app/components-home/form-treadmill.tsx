@@ -21,6 +21,7 @@ export default function FormTreadmill() {
                     cols={50}
                 ></textarea>
             </div>
+            <button className="submit">Submit</button>
         </form>
     );
 }

@@ -687,6 +687,13 @@ h6 {
   cursor: pointer;
 }
 
+.submit {
+  height: 4rem;
+  margin-top: 1rem;
+  background-color: #24ade8;
+  border: none;
+}
+
 .snaps-inline {
   scroll-snap-type: inline mandatory;
   scroll-padding-inline: 1rem;
