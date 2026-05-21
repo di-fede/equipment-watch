@@ -619,6 +619,16 @@ h6 {
 .top__machineNumber {
   font-size: 15rem;
 }
+@media screen and (max-width: 600px) {
+  .top__machineNumber {
+    font-size: 10rem;
+  }
+}
+@media screen and (max-height: 800px) {
+  .top__machineNumber {
+    font-size: 10rem;
+  }
+}
 
 .home__bottom-container {
   width: 100%;

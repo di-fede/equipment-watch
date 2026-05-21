@@ -58,5 +58,12 @@
 
     &__machineNumber {
         font-size: 15rem;
+
+        @media screen and (max-width: 600px) {
+            font-size: 10rem;
+        }
+        @media screen and (max-height: 800px) {
+            font-size: 10rem;
+        }
     }
 }
