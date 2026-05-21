@@ -66,17 +66,6 @@ export default function Electrical() {
                     </div>
                 ))}
             </div>
-            <div className="form__input-additional">
-                <label className="additional-label" htmlFor="message">
-                    Other/Additional Info
-                </label>
-                <textarea
-                    className="additionalInfo"
-                    id="message"
-                    rows={4}
-                    cols={50}
-                ></textarea>
-            </div>
         </div>
     );
 }
