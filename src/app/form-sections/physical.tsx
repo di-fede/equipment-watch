@@ -9,10 +9,10 @@ export default function Physical() {
         htmlFor: string;
     }[] = [
         {
-            value: "button",
+            value: "physical-button",
             label1: "Broken",
             label2: "Button",
-            htmlFor: "button",
+            htmlFor: "physical-button",
         },
         {
             value: "UI",
@@ -62,7 +62,7 @@ export default function Physical() {
                             onChange={() => toggleSelection(item.value)}
                         />
                         <label
-                            className={`${selected.includes(item.value) ? "backOrange" : "backGrey"} element__label`}
+                            className={`${selected.includes(item.value) ? "backBlue" : "backGrey"} element__label`}
                             htmlFor={item.htmlFor}
                         >
                             {item.label1} <br />

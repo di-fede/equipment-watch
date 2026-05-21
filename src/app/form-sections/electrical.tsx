@@ -54,7 +54,7 @@ export default function Electrical() {
                         <label
                             className={`${
                                 selected.includes(item.value)
-                                    ? "backOrange"
+                                    ? "backBlue"
                                     : "backGrey"
                             } element__label`}
                             htmlFor={item.htmlFor}
@@ -67,7 +67,9 @@ export default function Electrical() {
                 ))}
             </div>
             <div className="form__input-additional">
-                <label htmlFor="message">Other/Additional Info</label>
+                <label className="additional-label" htmlFor="message">
+                    Other/Additional Info
+                </label>
                 <textarea
                     className="additionalInfo"
                     id="message"

@@ -45,12 +45,12 @@ export default function Mechanical() {
                             id={item.htmlFor}
                             value={item.value}
                             checked={selected.includes(item.value)}
-                            onChange={() => toggleSelection}
+                            onChange={() => toggleSelection(item.value)}
                         />
                         <label
                             className={`${
                                 selected.includes(item.value)
-                                    ? "backOrange"
+                                    ? "backBlue"
                                     : "backGrey"
                             } element__label`}
                             htmlFor={item.htmlFor}
