@@ -710,22 +710,29 @@ h6 {
   flex-direction: column;
 }
 
+.formInput {
+  width: 100%;
+}
+.formInput__heading {
+  justify-self: center;
+  font-size: 2rem;
+  color: #fff;
+}
 .formInput__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: auto;
   gap: 4px;
   width: 100%;
   height: 100%;
   margin-bottom: 2.6rem;
 }
-
-.form-input {
+.formInput__label {
+  display: block;
   width: 100%;
-}
-
-.field-heading {
-  justify-self: center;
+  height: 100%;
+  font-size: 2.6rem;
+  padding: 2rem;
 }
 
 .backBlue {
@@ -742,30 +749,26 @@ h6 {
   display: none;
 }
 
-.element__label {
-  display: block;
-  width: 100%;
-  height: 100%;
-  font-size: 2.6rem;
-  padding: 2rem;
-}
-
 .additionalInfo {
   width: 100%;
 }
-
-.additional-label {
+.additionalInfo__label {
   font-size: 2rem;
   color: white;
 }
 
 .logoBox {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 4rem;
+  height: 8rem;
   padding: 2.6rem;
+}
+.logoBox__subTitle {
+  color: #fff;
+  font-size: 1.8rem;
 }
 
 .logo-container {
@@ -774,6 +777,7 @@ h6 {
   gap: 0.6rem;
   align-items: center;
   width: 30rem;
+  margin-bottom: 1.6rem;
 }
 
 .nav {

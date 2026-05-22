@@ -11,7 +11,7 @@ export default function FormTreadmill() {
                 <Physical />
             </div>
             <div className="form__input-additional">
-                <label className="additional-label" htmlFor="message">
+                <label className="additionalInfo__label" htmlFor="message">
                     Other/Additional Info
                 </label>
                 <textarea

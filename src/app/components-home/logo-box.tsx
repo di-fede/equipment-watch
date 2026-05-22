@@ -1,3 +1,10 @@
+import { Roboto } from "next/font/google";
+
+const roboto = Roboto({
+    style: ["normal"],
+    subsets: ["latin"],
+    weight: ["300"],
+});
 export default function LogoBox() {
     return (
         <div className="logoBox">
@@ -71,6 +78,9 @@ export default function LogoBox() {
                         </g>
                     </g>
                 </svg>
+            </div>
+            <div className={`logoBox__subTitle ${roboto.className}`}>
+                Equipment Tracker
             </div>
         </div>
     );

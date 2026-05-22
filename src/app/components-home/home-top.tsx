@@ -8,9 +8,6 @@ const roboto = Roboto({
 export default function HomeTop() {
     return (
         <div className="top">
-            <div className={`tracker__title ${roboto.className}`}>
-                Equipment Tracker
-            </div>
             <div className="top__location-container">
                 Location: <div className="top__location">Delray Beach</div>
             </div>

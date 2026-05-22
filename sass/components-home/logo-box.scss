@@ -1,10 +1,16 @@
 .logoBox {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 4rem;
+    height: 8rem;
     padding: 2.6rem;
+
+    &__subTitle {
+        color: #fff;
+        font-size: 1.8rem;
+    }
 }
 
 .logo-container {
@@ -13,4 +19,5 @@
     gap: 0.6rem;
     align-items: center;
     width: 30rem;
+    margin-bottom: 1.6rem;
 }

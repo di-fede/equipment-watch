@@ -47,12 +47,10 @@ export default function Physical() {
             id="form-physical"
             className="treadmill__physical form__element media-element"
         >
-            <div className="treadmill__physical-heading field-heading">
-                Treadmill Physical
-            </div>
+            <div className="formInput__heading">Treadmill Physical</div>
             <div className="formInput__grid">
                 {physicItems.map((item) => (
-                    <div key={item.value} className="form-input">
+                    <div key={item.value} className="formInpu">
                         <input
                             type="checkbox"
                             className="checkbox"
@@ -62,7 +60,7 @@ export default function Physical() {
                             onChange={() => toggleSelection(item.value)}
                         />
                         <label
-                            className={`${selected.includes(item.value) ? "backBlue" : "backGrey"} element__label`}
+                            className={`${selected.includes(item.value) ? "backBlue" : "backGrey"} formInput__label`}
                             htmlFor={item.htmlFor}
                         >
                             {item.label1} <br />

@@ -33,16 +33,11 @@ export default function Electrical() {
     };
 
     return (
-        <div
-            id="form-electrical"
-            className="treadmill__mechanical form__element media-element"
-        >
-            <div className="treadmill__mechanical-heading field-heading">
-                Electrical Issue
-            </div>
+        <div id="form-electrical" className=" form__element media-element">
+            <div className=" formInput__heading">Electrical Issue</div>
             <div className="formInput__grid">
                 {electItems.map((item) => (
-                    <div key={item.value} className="form__input">
+                    <div key={item.value} className="formInput">
                         <input
                             className="checkbox"
                             type="checkbox"
@@ -56,7 +51,7 @@ export default function Electrical() {
                                 selected.includes(item.value)
                                     ? "backBlue"
                                     : "backGrey"
-                            } element__label`}
+                            } formInput__label`}
                             htmlFor={item.htmlFor}
                         >
                             {item.label1}
