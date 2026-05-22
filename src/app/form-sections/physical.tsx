@@ -1,5 +1,19 @@
 "use client";
+import { Barlow, Montserrat } from "next/font/google";
 import { useState } from "react";
+
+const barlow = Barlow({
+    style: ["normal"],
+    subsets: ["latin"],
+    weight: ["400"],
+});
+const montserrat = Montserrat({
+    style: ["normal"],
+    subsets: ["latin"],
+    weight: ["400"],
+});
+const barl = barlow.className;
+const mont = montserrat.className;
 
 export default function Physical() {
     const physicItems: {
@@ -47,8 +61,10 @@ export default function Physical() {
             id="form-physical"
             className="treadmill__physical form__element media-element"
         >
-            <div className="formInput__heading">Treadmill Physical</div>
-            <div className="formInput__grid">
+            <div className={`formInput__heading ${mont}`}>
+                Treadmill Physical
+            </div>
+            <div className={`formInput__grid ${barl}`}>
                 {physicItems.map((item) => (
                     <div key={item.value} className="formInpu">
                         <input

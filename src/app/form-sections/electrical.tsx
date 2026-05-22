@@ -1,5 +1,20 @@
 "use client";
+import { Barlow, Montserrat } from "next/font/google";
 import { useEffect, useState } from "react";
+
+const barlow = Barlow({
+    style: ["normal"],
+    subsets: ["latin"],
+    weight: ["400"],
+});
+const montserrat = Montserrat({
+    style: ["normal"],
+    subsets: ["latin"],
+    weight: ["400"],
+});
+
+const barl = barlow.className;
+const mont = montserrat.className;
 
 export default function Electrical() {
     const electItems: {
@@ -34,8 +49,8 @@ export default function Electrical() {
 
     return (
         <div id="form-electrical" className=" form__element media-element">
-            <div className=" formInput__heading">Electrical Issue</div>
-            <div className="formInput__grid">
+            <div className={`formInput__heading ${mont}`}>Electrical Issue</div>
+            <div className={`formInput__grid ${barl}`}>
                 {electItems.map((item) => (
                     <div key={item.value} className="formInput">
                         <input

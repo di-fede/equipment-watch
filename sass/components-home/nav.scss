@@ -15,5 +15,9 @@
     &__element {
         background-color: transparent;
         border: none;
+
+        &.active .svgPath {
+            fill: #24ade8;
+        }
     }
 }

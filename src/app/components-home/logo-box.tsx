@@ -1,9 +1,15 @@
-import { Roboto } from "next/font/google";
+import { Barlow_Condensed, Montserrat, Roboto } from "next/font/google";
 
-const roboto = Roboto({
+const montserrat = Montserrat({
     style: ["normal"],
     subsets: ["latin"],
-    weight: ["300"],
+    weight: ["600"],
+});
+
+const barlow = Barlow_Condensed({
+    style: ["normal"],
+    subsets: ["latin"],
+    weight: ["400"],
 });
 export default function LogoBox() {
     return (
@@ -79,7 +85,7 @@ export default function LogoBox() {
                     </g>
                 </svg>
             </div>
-            <div className={`logoBox__subTitle ${roboto.className}`}>
+            <div className={`logoBox__subTitle ${barlow.className}`}>
                 Equipment Tracker
             </div>
         </div>

@@ -1,5 +1,20 @@
 "use client";
+import { Barlow, Barlow_Condensed, Montserrat } from "next/font/google";
 import { useState } from "react";
+
+const barlow = Barlow({
+    style: ["normal"],
+    subsets: ["latin"],
+    weight: ["400"],
+});
+const montserrat = Montserrat({
+    style: ["normal"],
+    subsets: ["latin"],
+    weight: ["400"],
+});
+
+const barl = barlow.className;
+const mont = montserrat.className;
 
 export default function Mechanical() {
     const mechItems: {
@@ -33,12 +48,14 @@ export default function Mechanical() {
             id="form-mechanical"
             className="treadmill__mechanical form__element media-element"
         >
-            <div className="treadmill__mechanical-heading field-heading">
+            <div
+                className={`treadmill__mechanical-heading field-heading ${mont}`}
+            >
                 Mechanical Issue
             </div>
-            <div className="formInput__grid">
+            <div className={`formInput__grid ${barl}`}>
                 {mechItems.map((item) => (
-                    <div className="form__input">
+                    <div className="formInput">
                         <input
                             type="checkbox"
                             className="checkbox"
@@ -52,7 +69,7 @@ export default function Mechanical() {
                                 selected.includes(item.value)
                                     ? "backBlue"
                                     : "backGrey"
-                            } element__label`}
+                            } formInput__label`}
                             htmlFor={item.htmlFor}
                         >
                             {item.label1}

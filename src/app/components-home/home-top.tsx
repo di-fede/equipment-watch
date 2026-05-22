@@ -1,13 +1,19 @@
-import { Roboto } from "next/font/google";
+import { Montserrat, Roboto } from "next/font/google";
 
+const montserrat = Montserrat({
+    style: ["normal"],
+    subsets: ["latin"],
+    weight: ["400"],
+});
 const roboto = Roboto({
     style: ["normal"],
     subsets: ["latin"],
-    weight: ["300"],
+    weight: ["400"],
 });
+
 export default function HomeTop() {
     return (
-        <div className="top">
+        <div className={`top ${montserrat.className}`}>
             <div className="top__location-container">
                 Location: <div className="top__location">Delray Beach</div>
             </div>
@@ -19,7 +25,9 @@ export default function HomeTop() {
             </div>
             <div className="top__right">
                 <div>No.</div>
-                <div className="top__machineNumber">2</div>
+                <div className={`top__machineNumber ${roboto.className}`}>
+                    2
+                </div>
             </div>
         </div>
     );
