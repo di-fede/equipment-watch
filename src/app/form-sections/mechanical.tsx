@@ -55,7 +55,7 @@ export default function Mechanical() {
             </div>
             <div className={`formInput__grid ${barl}`}>
                 {mechItems.map((item) => (
-                    <div className="formInput">
+                    <div key={item.value} className="formInput">
                         <input
                             type="checkbox"
                             className="checkbox"

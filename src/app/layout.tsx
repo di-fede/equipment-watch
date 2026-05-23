@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Roboto } from "next/font/google";
 import "./globals.css";
+import Header from "./components-main/header";
 
 const roboto = Roboto({
     style: ["normal"],
@@ -42,7 +43,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" className={`${roboto.className}`}>
-            <body>{children}</body>
+            <body>
+                <Header />
+                {children}
+            </body>
         </html>
     );
 }

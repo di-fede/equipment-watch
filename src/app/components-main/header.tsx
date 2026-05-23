@@ -11,9 +11,9 @@ const barlow = Barlow_Condensed({
     subsets: ["latin"],
     weight: ["400"],
 });
-export default function LogoBox() {
+export default function Header() {
     return (
-        <div className="logoBox">
+        <div className="header">
             <div className="logo-container">
                 <svg
                     id="Layer_1"
@@ -27,7 +27,7 @@ export default function LogoBox() {
                             <rect width="220" height="16" fill="none" />
                         </clipPath>
                     </defs>
-                    <g clip-path="url(#clippath)">
+                    <g clipPath="url(#clippath)">
                         <g>
                             <path
                                 d="M16.35,5.86V0L7.42,8.7l8.93-2.84Z"
@@ -85,7 +85,7 @@ export default function LogoBox() {
                     </g>
                 </svg>
             </div>
-            <div className={`logoBox__subTitle ${barlow.className}`}>
+            <div className={`header__subTitle ${barlow.className}`}>
                 Equipment Tracker
             </div>
         </div>
