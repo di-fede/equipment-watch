@@ -34,7 +34,7 @@ export default function ButtonArea() {
                     onMouseLeave={handleMouseLeave}
                     className="start__buttonBox"
                 >
-                    <Link href={"/"} className="start__button">
+                    <Link href={"/manual-form"} className="start__button">
                         Enter Manually
                     </Link>
                 </div>
