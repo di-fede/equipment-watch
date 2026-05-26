@@ -1,13 +1,14 @@
-import FormTreadmill from "./components-home/form-treadmill";
-import HomeTop from "./components-home/home-top";
-import Nav from "./components-home/nav";
+import Link from "next/link";
+import LogoImage from "./components-start/logo-image";
+import LogoText from "./components-start/logo-text";
+import ButtonArea from "./components-start/startButton-area";
 
 export default function Home() {
     return (
-        <div className="main">
-            <HomeTop />
-            <FormTreadmill />
-            <Nav />
+        <div className="start">
+            <LogoImage />
+            <LogoText />
+            <ButtonArea />
         </div>
     );
 }

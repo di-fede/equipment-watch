@@ -11,7 +11,7 @@ const roboto = Roboto({
     weight: ["400"],
 });
 
-export default function HomeTop() {
+export default function EquipHeading() {
     return (
         <div className={`top ${montserrat.className}`}>
             <div className="top__location-container">

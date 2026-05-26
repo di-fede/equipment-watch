@@ -1,6 +1,6 @@
-import Electrical from "../form-sections/electrical";
-import Mechanical from "../form-sections/mechanical";
-import Physical from "../form-sections/physical";
+import Electrical from "../../form-sections/electrical";
+import Mechanical from "../../form-sections/mechanical";
+import Physical from "../../form-sections/physical";
 
 export default function FormTreadmill() {
     return (
