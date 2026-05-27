@@ -34,4 +34,8 @@
     height: 4rem;
     border-radius: 6px;
     background-color: $color-primary;
+    @media screen and (max-width: 420px) {
+        left: 5px;
+        width: 6rem;
+    }
 }

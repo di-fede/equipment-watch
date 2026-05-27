@@ -283,6 +283,12 @@ a {
   border-radius: 6px;
   background-color: #24ade8;
 }
+@media screen and (max-width: 420px) {
+  .backToScan {
+    left: 5px;
+    width: 6rem;
+  }
+}
 
 .nav {
   width: 100%;
