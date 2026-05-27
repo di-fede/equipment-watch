@@ -25,7 +25,7 @@ export default function ButtonArea() {
                     onMouseLeave={handleMouseLeave}
                     className="start__buttonBox"
                 >
-                    <Link href={"/"} className="start__button">
+                    <Link href={"/treadmill"} className="start__button">
                         Scan Label
                     </Link>
                 </div>

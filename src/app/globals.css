@@ -305,6 +305,7 @@ a {
   grid-column: 1/-1;
   grid-row: 1/2;
   width: 60%;
+  max-width: 50rem;
   height: 100%;
   opacity: 0.9;
 }
@@ -351,6 +352,73 @@ a {
 
 .hovClick {
   background-color: #1b8abd;
+}
+
+.page__manualForm {
+  display: grid;
+  grid-template-rows: 8rem 1fr;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.manualForm {
+  width: 70rem;
+  display: grid;
+  grid-template-columns: 20rem 1fr;
+  column-gap: 2rem;
+  row-gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  background-color: #414042;
+  padding: 4rem;
+}
+@media screen and (max-width: 600px) {
+  .manualForm {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+    max-width: 95vw;
+  }
+}
+.manualForm__heading {
+  font-size: 2rem;
+}
+.manualForm__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20rem;
+}
+.manualForm__heading {
+  color: #fff;
+}
+.manualForm__field {
+  height: 5rem;
+  font-size: 1.8rem;
+}
+.manualForm__label {
+  color: #fff;
+  font-size: 2rem;
+}
+.manualForm__submitButton {
+  font-size: 2rem;
+  color: #fff;
+  background-color: #24ade8;
+  border: none;
+  padding: 5px;
+}
+.manualForm__backButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  margin-top: 5rem;
+  width: 8rem;
+  height: 4rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #24ade8;
 }
 
 /*# sourceMappingURL=globals.css.map */

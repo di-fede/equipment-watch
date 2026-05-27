@@ -61,9 +61,7 @@ export default function Physical() {
             id="form-physical"
             className="treadmill__physical form__element media-element"
         >
-            <div className={`formInput__heading ${mont}`}>
-                Treadmill Physical
-            </div>
+            <div className={`formInput__heading ${mont}`}>Physical Issue</div>
             <div className={`formInput__grid ${barl}`}>
                 {physicItems.map((item) => (
                     <div key={item.value} className="formInpu">
