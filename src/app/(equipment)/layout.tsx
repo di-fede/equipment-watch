@@ -1,3 +1,4 @@
+import Link from "next/link";
 import EquipHeading from "../components-main/equip-heading";
 import Header from "../components-main/header";
 import Nav from "../components-main/nav";
@@ -13,6 +14,9 @@ export default function EquipmentLayout({
             <EquipHeading />
             {children}
             <Nav />
+            <Link className="backToScan" href={"/"}>
+                Back
+            </Link>
         </div>
     );
 }
