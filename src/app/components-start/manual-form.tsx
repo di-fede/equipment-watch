@@ -20,7 +20,7 @@ export default function ManualForm() {
         e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
     ) => {};
 
-    function handleSubmit(e) {
+    function handleSubmit(e: React.SubmitEvent<HTMLFormElement>) {
         e.preventDefault();
         console.log(e);
     }
