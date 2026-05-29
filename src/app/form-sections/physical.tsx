@@ -69,6 +69,7 @@ export default function Physical() {
                             type="checkbox"
                             className="checkbox"
                             id={item.htmlFor}
+                            name="physical"
                             value={item.value}
                             checked={selected.includes(item.value)}
                             onChange={() => toggleSelection(item.value)}
@@ -86,20 +87,3 @@ export default function Physical() {
         </div>
     );
 }
-
-//     <div className="form__input">
-//           <input type="radio" id="button" value={"button"} />
-//           <label htmlFor="button">Broken Button</label>
-//       </div>
-//       <div className="form__input">
-//           <input type="radio" id="display" value={"display"} />
-//           <label htmlFor="display">Broken Display</label>
-//       </div>
-//       <div className="form__input">
-//           <input type="radio" id="handle" value={"handle"} />
-//           <label htmlFor="handle">Broken Handle</label>
-//       </div>
-//       <div className="form__input">
-//           <input type="radio" id="powerCord" value={"powerCord"} />
-//           <label htmlFor="powerCord">Damaged Power Cord</label>
-//       </div>

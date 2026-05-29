@@ -57,6 +57,7 @@ export default function Electrical() {
                             className="checkbox"
                             type="checkbox"
                             id={item.htmlFor}
+                            name="electrical"
                             value={item.value}
                             checked={selected.includes(item.value)}
                             onChange={() => toggleSelection(item.value)}

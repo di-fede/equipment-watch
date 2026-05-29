@@ -43,6 +43,7 @@ export default function Mechanical() {
             prev.includes(val) ? prev.filter((v) => v !== val) : [...prev, val],
         );
     };
+    console.log({ selected });
     return (
         <div
             id="form-mechanical"
@@ -60,6 +61,7 @@ export default function Mechanical() {
                             type="checkbox"
                             className="checkbox"
                             id={item.htmlFor}
+                            name="mechanical"
                             value={item.value}
                             checked={selected.includes(item.value)}
                             onChange={() => toggleSelection(item.value)}
