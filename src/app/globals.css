@@ -66,6 +66,13 @@ a {
   height: calc(100% - 8rem);
 }
 
+.back-arrow {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  margin-right: 2px;
+}
+
 .top {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

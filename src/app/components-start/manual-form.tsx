@@ -2,6 +2,8 @@
 import { Montserrat } from "next/font/google";
 import Link from "next/link";
 import { useState } from "react";
+import { ButtonProvider } from "../context/buttonContext";
+import BackButton from "../components-main/back-button";
 
 const montserrat = Montserrat({
     style: ["normal"],
@@ -107,9 +109,9 @@ export default function ManualForm() {
                 />
                 <button className={`manualForm__submitButton`}>Go</button>
             </form>
-            <Link href={"/"} className="manualForm__backButton">
-                Back
-            </Link>
+            <ButtonProvider content="back" link="/">
+                <BackButton />
+            </ButtonProvider>
         </div>
     );
 }
