@@ -386,6 +386,12 @@ a {
   z-index: 4;
   transition: all 0.2s;
 }
+.start__buttonBox:hover {
+  filter: brightness(0.8);
+}
+.start__buttonBox:visited {
+  filter: brightness(0.8);
+}
 
 .hovClick {
   background-color: #1b8abd;
