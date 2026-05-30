@@ -318,6 +318,16 @@ a {
   fill: #24ade8;
 }
 
+.user {
+  color: #fff;
+  font-size: 2rem;
+}
+.user__container {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
 .start {
   display: grid;
   grid-template-columns: 1fr 70% 1fr;

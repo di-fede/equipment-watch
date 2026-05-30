@@ -1,4 +1,4 @@
-import { Barlow_Condensed, Montserrat, Roboto } from "next/font/google";
+import { Barlow_Condensed, Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({
     style: ["normal"],

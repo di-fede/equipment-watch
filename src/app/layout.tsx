@@ -2,17 +2,18 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "./components-main/header";
+import User from "./components-main/user";
 
-const roboto = Roboto({
-    style: ["normal"],
-    subsets: ["latin"],
-    weight: ["400", "500", "600"],
-});
+// const roboto = Roboto({
+//     style: ["normal"],
+//     subsets: ["latin"],
+//     weight: ["400", "500", "600"],
+// });
 
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
-});
+// const geistMono = Geist_Mono({
+//     variable: "--font-geist-mono",
+//     subsets: ["latin"],
+// });
 
 export const metadata: Metadata = {
     title: "Equipment Watch",
@@ -43,8 +44,9 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className={`${roboto.className}`}>
+        <html lang="en">
             <body>
+                <User />
                 {/* <Header /> */}
                 {children}
             </body>
