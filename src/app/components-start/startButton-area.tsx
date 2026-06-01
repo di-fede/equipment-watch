@@ -1,6 +1,6 @@
 import { Barlow_Condensed } from "next/font/google";
 import Link from "next/link";
-import { auth } from "../lib/auth";
+import { auth } from "../_lib/auth";
 
 const barlow = Barlow_Condensed({
     style: ["normal"],
@@ -13,20 +13,14 @@ export default async function ButtonArea() {
 
     return (
         <div className="start__center-container">
-            {session?.user ? (
-                <div className={`start__button-container ${barlow.className} `}>
-                    <Link href={"/treadmill"} className="start__buttonBox">
-                        <div className="start__button">Scan Label</div>
-                    </Link>
-                    <Link href={"/manual-form"} className="start__buttonBox">
-                        <div className="start__button">Enter Manually</div>
-                    </Link>
-                </div>
-            ) : (
-                <Link href={"/api/auth/signin"} className="start__buttonBox">
-                    <div className="start__button">Sign In</div>
+            <div className={`start__button-container ${barlow.className} `}>
+                <Link href={"/treadmill"} className="start__buttonBox">
+                    <div className="start__button">Scan Label</div>
                 </Link>
-            )}
+                <Link href={"/manual-form"} className="start__buttonBox">
+                    <div className="start__button">Enter Manually</div>
+                </Link>
+            </div>
         </div>
     );
 }

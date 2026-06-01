@@ -1,5 +1,5 @@
 import { Montserrat } from "next/font/google";
-import { auth } from "../lib/auth";
+import { auth } from "../_lib/auth";
 
 const montserrat = Montserrat({
     style: ["normal"],
@@ -27,3 +27,4 @@ export default async function User() {
         </div>
     );
 }
+////// in layout ///////

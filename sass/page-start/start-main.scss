@@ -27,6 +27,14 @@
         margin-bottom: 5rem;
         z-index: 2;
     }
+    &__textSvg {
+        pointer-events: none;
+    }
+
+    &__textPath {
+        width: 100%;
+        height: 100%;
+    }
 
     ///////////  CENTER ////////////
 
@@ -60,6 +68,7 @@
         background-color: $color-primary;
         text-transform: uppercase;
         clip-path: polygon(0 0, 100% 0%, 100% 60%, 93% 100%, 0% 100%);
+        border: none;
         z-index: 4;
         transition: all 0.2s;
 
@@ -69,6 +78,11 @@
         &:visited {
             filter: brightness(0.8);
         }
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
     }
 }
 .hovClick {

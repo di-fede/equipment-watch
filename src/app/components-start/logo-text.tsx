@@ -2,10 +2,8 @@ export default function LogoText() {
     return (
         <div className="start__logoText-container">
             <svg
-                //     id="Layer_1"
-                //     data-name="Layer 1"
+                className="start__textSvg"
                 xmlns="http://www.w3.org/2000/svg"
-                //     xmlns:xlink="http://www.w3.org/1999/xlink"
                 viewBox="10 0 220 220"
             >
                 <defs>
@@ -15,14 +13,6 @@ export default function LogoText() {
                 </defs>
                 <g clipPath="url(#clippath)">
                     <g>
-                        {/* <path
-                            d="M16.35,5.86V0L7.42,8.7l8.93-2.84Z"
-                            fill="#00ade8"
-                        />
-                        <path
-                            d="M2.6,13.37l-2.6,2.5h16.35V6.82L2.6,13.37Z"
-                            fill="#00ade8"
-                        /> */}
                         <path
                             d="M72.3.95v9.04c-.01.92-.33,1.62-.94,2.08-.63.5-1.42.75-2.39.75s-1.75-.24-2.37-.75c-.62-.47-.94-1.17-.96-2.08V.95h-3.24v9.72c.02,1.56.67,2.83,1.93,3.75,1.24.95,2.8,1.44,4.65,1.45,1.87-.01,3.45-.5,4.68-1.45,1.22-.92,1.86-2.19,1.9-3.75V.95h-3.24Z"
                             fill="#fff"
