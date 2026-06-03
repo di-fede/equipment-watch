@@ -1,0 +1,60 @@
+"use client";
+import { useState } from "react";
+import { useLogin } from "./useLogin";
+export default function LoginForm() {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const { login, isPending } = useLogin();
+
+    function handleSubmit(e: React.SubmitEvent<HTMLFormElement>) {
+        e.preventDefault();
+        if (!email || !password) return;
+        login({ email, password });
+    }
+
+    return (
+        <div className="login__form-container">
+            <form onSubmit={handleSubmit}>
+                <label className="login__input-label" htmlFor="email">
+                    Email
+                </label>
+                <input
+                    className="login__email login__input"
+                    type="email"
+                    id="email"
+                    autoComplete="username"
+                    value={email}
+                    onChange={(e) => {
+                        setEmail(e.target.value);
+                    }}
+                    disabled={isPending}
+                />
+                <label className="login__input-label" htmlFor="password">
+                    Password
+                </label>
+                <input
+                    className="login__password login__input"
+                    type="password"
+                    id="password"
+                    autoComplete="current-password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    disabled={isPending}
+                />
+
+                <button className="start__buttonBox" disabled={isPending}>
+                    <div className="start__button">
+                        <span
+                            style={{
+                                fontSize: 12,
+                                textTransform: "none",
+                            }}
+                        >
+                            Login
+                        </span>
+                    </div>
+                </button>
+            </form>
+        </div>
+    );
+}

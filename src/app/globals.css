@@ -328,6 +328,25 @@ a {
   right: 1rem;
 }
 
+.login__form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 40rem;
+  background-color: #414042;
+}
+.login__input {
+  display: block;
+  width: 30rem;
+  height: 4rem;
+  margin-bottom: 2rem;
+}
+.login__input-label {
+  color: #fff;
+  font-size: 1.4rem;
+}
+
 .start {
   display: grid;
   grid-template-columns: 1fr 70% 1fr;
