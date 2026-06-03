@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "./components-main/header";
 import User from "./components-main/user";
+import QueryProvider from "./providers";
 
 // const roboto = Roboto({
 //     style: ["normal"],

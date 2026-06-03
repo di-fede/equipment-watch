@@ -1,4 +1,9 @@
+"use client";
 import { Montserrat, Roboto } from "next/font/google";
+import { useEffect } from "react";
+import { getEquipment } from "../../services/apiequipment";
+import { useQuery } from "@tanstack/react-query";
+import Spinner from "./Spinner";
 
 const montserrat = Montserrat({
     style: ["normal"],
@@ -12,6 +17,20 @@ const roboto = Roboto({
 });
 
 export default function EquipHeading() {
+    // useEffect(function () {
+    //     getEquipment().then((data) => console.log(data));
+    // }, []);
+
+    const {
+        isLoading,
+        data: equipment,
+        error,
+    } = useQuery({
+        queryKey: ["equipment"],
+        queryFn: getEquipment,
+    });
+    if (isLoading) return <Spinner />;
+
     return (
         <div className={`top ${montserrat.className}`}>
             <div className="top__location-container">
