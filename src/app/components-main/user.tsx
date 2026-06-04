@@ -10,6 +10,7 @@ const montserrat = Montserrat({
 export default async function User() {
     return (
         <div className="user__container">
+            <div className="user__name"></div>
             {/* TODO: Display logged-in user info from Supabase */}
         </div>
     );

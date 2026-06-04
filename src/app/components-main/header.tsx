@@ -1,4 +1,5 @@
 import { Barlow_Condensed, Montserrat } from "next/font/google";
+import Logout from "../authentication/logout";
 
 const montserrat = Montserrat({
     style: ["normal"],
@@ -88,6 +89,7 @@ export default function Header() {
             <div className={`header__subTitle ${barlow.className}`}>
                 Equipment Tracker
             </div>
+            <Logout />
         </div>
     );
 }

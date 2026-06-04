@@ -8,7 +8,7 @@ export async function loginApi({ email, password }) {
     if (error) throw new Error(error.message);
 
     console.log(data);
-    return data;
+    return data.user;
 }
 
 export async function getCurrentUser() {
@@ -23,4 +23,9 @@ export async function getCurrentUser() {
     if (error) throw new Error(error.message);
 
     return data?.user;
+}
+
+export async function logout() {
+    const { error } = await supabase.auth.signOut();
+    if (error) throw new Error(error.message);
 }

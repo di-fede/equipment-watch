@@ -9,7 +9,15 @@ export default function LoginForm() {
     function handleSubmit(e: React.SubmitEvent<HTMLFormElement>) {
         e.preventDefault();
         if (!email || !password) return;
-        login({ email, password });
+        login(
+            { email, password },
+            {
+                onSettled: () => {
+                    setEmail("");
+                    setPassword("");
+                },
+            },
+        );
     }
 
     return (

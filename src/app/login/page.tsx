@@ -1,7 +1,6 @@
 import LogoImage from "../components-start/logo-image";
 import LogoText from "../components-start/logo-text";
 import LoginForm from "../authentication/login-form";
-import QueryProvider from "../providers";
 
 export default function Login() {
     return (
@@ -9,9 +8,7 @@ export default function Login() {
             <LogoImage />
             <LogoText />
             <div className="start__center-container login__center-container">
-                <QueryProvider>
-                    <LoginForm />
-                </QueryProvider>
+                <LoginForm />
             </div>
         </div>
     );
