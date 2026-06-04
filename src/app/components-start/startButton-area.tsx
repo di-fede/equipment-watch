@@ -1,6 +1,5 @@
 import { Barlow_Condensed } from "next/font/google";
 import Link from "next/link";
-import { auth } from "../_lib/auth";
 
 const barlow = Barlow_Condensed({
     style: ["normal"],
@@ -9,7 +8,6 @@ const barlow = Barlow_Condensed({
 });
 
 export default async function ButtonArea() {
-    const session = await auth();
 
     return (
         <div className="start__center-container">

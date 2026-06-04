@@ -1,6 +1,3 @@
 "use server";
-import { signIn } from "./auth";
 
-export async function signInAction() {
-    await signIn("google", { redirectTo: "/" });
-}
+// TODO: Add Supabase auth actions here (signOut, etc.)

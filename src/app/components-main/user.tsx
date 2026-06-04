@@ -1,5 +1,4 @@
 import { Montserrat } from "next/font/google";
-import { auth } from "../_lib/auth";
 
 const montserrat = Montserrat({
     style: ["normal"],
@@ -7,23 +6,11 @@ const montserrat = Montserrat({
     weight: ["600"],
 });
 
+// TODO: Get user session from Supabase
 export default async function User() {
-    const session = await auth();
-    console.log(session);
-
     return (
         <div className="user__container">
-            {session ? (
-                <div className="user__name-container">
-                    <div className={`user ${montserrat.className}`}>
-                        <span>Logged in as:</span>
-                        <br />
-                        <span>{session.user?.name}</span>
-                    </div>
-                </div>
-            ) : (
-                ""
-            )}
+            {/* TODO: Display logged-in user info from Supabase */}
         </div>
     );
 }

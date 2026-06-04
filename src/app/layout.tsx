@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./components-main/header";
 import User from "./components-main/user";
 import QueryProvider from "./providers";
+import ProtectedRoute from "./ui/protectedRoute";
 
 // const roboto = Roboto({
 //     style: ["normal"],
@@ -48,8 +49,7 @@ export default function RootLayout({
         <html lang="en">
             <body>
                 <User />
-                {/* <Header /> */}
-                {children}
+                <ProtectedRoute>{children}</ProtectedRoute>
             </body>
         </html>
     );
