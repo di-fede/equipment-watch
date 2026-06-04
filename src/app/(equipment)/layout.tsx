@@ -4,7 +4,6 @@ import Nav from "../components-main/nav";
 import BackButton from "../components-main/back-button";
 import { ButtonProvider } from "../context/buttonContext";
 import QueryProvider from "../providers";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 export default function EquipmentLayout({
     children,
@@ -18,7 +17,6 @@ export default function EquipmentLayout({
                 <BackButton />
             </ButtonProvider>
             <QueryProvider>
-                <ReactQueryDevtools initialIsOpen={false} />
                 <EquipHeading />
                 {children}
             </QueryProvider>

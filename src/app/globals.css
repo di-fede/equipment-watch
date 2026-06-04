@@ -66,6 +66,11 @@ a {
   height: calc(100% - 8rem);
 }
 
+.loading {
+  font-size: 8rem;
+  color: white;
+}
+
 .back-arrow {
   display: flex;
   width: 16px;

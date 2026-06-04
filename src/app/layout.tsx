@@ -48,8 +48,10 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body>
-                <User />
-                <ProtectedRoute>{children}</ProtectedRoute>
+                <QueryProvider>
+                    <User />
+                    <ProtectedRoute>{children}</ProtectedRoute>
+                </QueryProvider>
             </body>
         </html>
     );
