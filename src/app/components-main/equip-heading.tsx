@@ -3,7 +3,6 @@ import { Montserrat, Roboto } from "next/font/google";
 import { useEffect } from "react";
 import { getEquipment } from "../../services/apiequipment";
 import { useQuery } from "@tanstack/react-query";
-import Spinner from "./Spinner";
 
 const montserrat = Montserrat({
     style: ["normal"],
