@@ -28,7 +28,6 @@ export default function EquipHeading() {
         queryKey: ["equipment"],
         queryFn: getEquipment,
     });
-    if (isLoading) return <Spinner />;
 
     return (
         <div className={`top ${montserrat.className}`}>
