@@ -1,7 +1,7 @@
 import Header from "../components-main/header";
-import LogoImage from "../components-start/logo-image";
-import LogoText from "../components-start/logo-text";
-import ManualForm from "../components-start/manual-form";
+import LogoImage from "../components-dash/logo-image";
+import LogoText from "../components-dash/logo-text";
+import ManualForm from "../components-dash/manual-form";
 
 export default function Page() {
     return (
