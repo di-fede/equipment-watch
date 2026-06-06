@@ -66,6 +66,136 @@ a {
   height: calc(100% - 8rem);
 }
 
+.adminForm__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  align-items: center;
+  row-gap: 2px;
+  height: 80%;
+}
+.adminForm__row {
+  grid-column: 1/4;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  height: 8rem;
+  align-items: center;
+  background-color: #b4b2b4;
+  padding: 1rem;
+}
+
+.newUser {
+  grid-row: 3/7;
+  grid-column: 2/4;
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  height: 50rem;
+}
+.newUser__container {
+  width: 100%;
+  height: calc(100% - 5rem);
+  padding: 0 3rem;
+}
+.newUser__heading {
+  font-size: 3rem;
+  padding: 3rem;
+}
+.newUser__input {
+  grid-column: 2/3;
+  width: 25rem;
+  height: 4rem;
+}
+.newUser__input-label {
+  grid-column: 1/2;
+  padding: 2rem;
+  font-size: 1.6rem;
+}
+
+.adminNav {
+  grid-column: 2/4;
+  grid-row: 3/4;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0 2rem 0;
+}
+.adminNav__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6rem;
+}
+.adminNav__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
+  height: 6rem;
+  color: #fff;
+  background-color: #000;
+  font-size: 2.4rem;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.button-selected {
+  color: #414042;
+  background-color: #fff;
+}
+
+.userNavAdmin {
+  grid-column: 1/2;
+  grid-row: 3/6;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 25rem;
+  background-color: #000;
+}
+.userNavAdmin__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  height: 6rem;
+}
+.userNavAdmin__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
+  height: 6rem;
+  color: #fff;
+  background-color: #414042;
+  font-size: 2.4rem;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.button-selected {
+  color: #414042;
+  background-color: #fff;
+}
+
+.dash__grid {
+  display: grid;
+  grid-template-columns: 1fr 70% 1fr;
+  grid-template-rows: repeat(7, 1fr);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #414042;
+}
+
 .headerDash {
   grid-column: 1/-1;
   grid-row: 1/3;
@@ -130,6 +260,7 @@ a {
   background-color: #414042;
   font-size: 2.4rem;
   border: 1px solid white;
+  cursor: pointer;
 }
 
 .button-selected {

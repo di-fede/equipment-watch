@@ -1,7 +1,7 @@
 "use client";
-import Electrical from "../../form-sections/electrical";
-import Mechanical from "../../form-sections/mechanical";
-import Physical from "../../form-sections/physical";
+import Electrical from "../../_form-sections/electrical";
+import Mechanical from "../../_form-sections/mechanical";
+import Physical from "../../_form-sections/physical";
 
 export default function FormTreadmill() {
     const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {

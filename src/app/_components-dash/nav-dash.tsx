@@ -1,4 +1,5 @@
 import { Barlow_Condensed } from "next/font/google";
+import Link from "next/link";
 import { useState } from "react";
 
 const barlow = Barlow_Condensed({
@@ -7,7 +8,7 @@ const barlow = Barlow_Condensed({
     weight: ["400"],
 });
 export default function NavDash() {
-    const [equipmentSelected, setEquipmentSelected] = useState(Boolean);
+    const [scanSelected, setScanSelected] = useState(Boolean);
     const [usersSelected, setUsersSelected] = useState(Boolean);
     const [adminSelected, setAdminSelected] = useState(Boolean);
 
@@ -16,34 +17,35 @@ export default function NavDash() {
             <div className={`navDash__container ${barlow.className}`}>
                 <div
                     onClick={() => {
-                        setEquipmentSelected(true);
+                        setScanSelected(true);
                         setUsersSelected(false);
                         setAdminSelected(false);
                     }}
-                    className={`navDash__button ${equipmentSelected ? "button-selected" : ""}`}
+                    className={`navDash__button ${scanSelected ? "button-selected" : ""}`}
                 >
-                    <div className="navDash__button-label">Equipment</div>
+                    <div className="navDash__button-label">Scan</div>
                 </div>
                 <div
                     onClick={() => {
                         setUsersSelected(true);
-                        setEquipmentSelected(false);
+                        setScanSelected(false);
                         setAdminSelected(false);
                     }}
                     className={`navDash__button ${usersSelected ? "button-selected" : ""}`}
                 >
                     <div className="navDash__button-label">Users</div>
                 </div>
-                <div
+                <Link
+                    href={"/admin"}
                     onClick={() => {
                         setAdminSelected(true);
-                        setEquipmentSelected(false);
+                        setScanSelected(false);
                         setUsersSelected(false);
                     }}
                     className={`navDash__button ${adminSelected ? "button-selected" : ""}`}
                 >
                     <div className="navDash__button-label">Admin</div>
-                </div>
+                </Link>
             </div>
         </div>
     );

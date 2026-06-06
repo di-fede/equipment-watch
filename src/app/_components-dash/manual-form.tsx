@@ -3,7 +3,7 @@ import { Montserrat } from "next/font/google";
 import Link from "next/link";
 import { useState } from "react";
 import { ButtonProvider } from "../context/buttonContext";
-import BackButton from "../components-main/back-button";
+import BackButton from "../_components-main/back-button";
 
 const montserrat = Montserrat({
     style: ["normal"],

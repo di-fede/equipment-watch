@@ -1,8 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Roboto } from "next/font/google";
 import "./globals.css";
-import Header from "./components-main/header";
-import User from "./components-main/user";
+import Header from "./_components-main/header";
+import User from "./_components-main/user";
 import QueryProvider from "./providers";
 import ProtectedRoute from "./ui/protectedRoute";
 
