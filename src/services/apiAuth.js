@@ -45,3 +45,12 @@ export async function logout() {
     const { error } = await supabase.auth.signOut();
     if (error) throw new Error(error.message);
 }
+export async function updateCurrentUser({ password, name }) {
+    // 1. Update password or name
+    let updateData;
+    if (password) updateData = { password };
+    if (name) updateData = { data: { name } };
+    const { data, error } = await supabase.auth.updateUser(updateData);
+
+    //2.
+}

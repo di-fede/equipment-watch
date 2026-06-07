@@ -1,11 +1,10 @@
 "use client";
 
 import { useForm, FieldValues } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import * as z from "zod";
 import { Montserrat } from "next/font/google";
-import { useSignup } from "../../../authentication/useSignup";
 import AdminUserNav from "@/app/_components-admin/admin-userNav";
+import { useUser } from "@/app/authentication/useUser";
+import { useState } from "react";
 
 const montserrat = Montserrat({
     style: ["normal"],
@@ -15,22 +14,23 @@ const montserrat = Montserrat({
 const mont = montserrat.className;
 
 export default function UpdateUser() {
-    const { signup, isLoading } = useSignup();
     const { register, formState, getValues, handleSubmit, reset } = useForm();
     const { errors } = formState;
 
-    function onSubmit({ name, email, password }: FieldValues) {
-        signup({ name, email, password }, { onSettled: () => reset() });
-    }
+    const {
+        user: {
+            email,
+            user_metadata: { name: currentName },
+        },
+    } = useUser();
+
+    const [name, setName] = useState(currentName);
 
     return (
         <div className={`adminForm ${mont}`}>
             <div className="adminForm__container">
                 <AdminUserNav />
-                <form
-                    onSubmit={handleSubmit(onSubmit)}
-                    className="adminForm__grid adminForm__create-form"
-                >
+                <form className="adminForm__grid adminForm__create-form">
                     <div className="adminForm__row">
                         <label
                             className="adminForm__input-label"
@@ -39,7 +39,6 @@ export default function UpdateUser() {
                             Name
                         </label>
                         <input
-                            disabled={isLoading}
                             className="adminForm__input"
                             id="name"
                             type="text"
@@ -88,7 +87,6 @@ export default function UpdateUser() {
                             Password (min 8 characters)
                         </label>
                         <input
-                            disabled={isLoading}
                             className="adminForm__input"
                             id="password"
                             type="text"
@@ -115,7 +113,6 @@ export default function UpdateUser() {
                             Re-enter Password
                         </label>
                         <input
-                            disabled={isLoading}
                             className="adminForm__input"
                             id="passwordConfirm"
                             type="text"
@@ -134,16 +131,10 @@ export default function UpdateUser() {
                     </div>
                     <div className="adminForm__row">
                         <div className="adminForm__button-container">
-                            <button
-                                className="adminForm__button-cancel"
-                                disabled={isLoading}
-                            >
+                            <button className="adminForm__button-cancel">
                                 Cancel
                             </button>
-                            <button
-                                className="adminForm__button-submit"
-                                disabled={isLoading}
-                            >
+                            <button className="adminForm__button-submit">
                                 Submit
                             </button>
                         </div>
