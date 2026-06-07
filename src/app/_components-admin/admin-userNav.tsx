@@ -8,30 +8,30 @@ const barlow = Barlow_Condensed({
     subsets: ["latin"],
     weight: ["400"],
 });
-export default function UserNavAdmin() {
-    const [createSelected, setCreateSelected] = useState(Boolean);
+export default function AdminUserNav() {
+    const [createSelected, setCreateSelected] = useState(Boolean(true));
     const [updateSelected, setUpdateSelected] = useState(Boolean);
 
     return (
-        <div className="userNavAdmin">
-            <div className={`userNavAdmin__container ${barlow.className}`}>
+        <div className="adminUserNav">
+            <div className={`adminUserNav__container ${barlow.className}`}>
                 <div
                     onClick={() => {
                         setCreateSelected(true);
                         setUpdateSelected(false);
                     }}
-                    className={`userNavAdmin__button ${createSelected ? "button-selected" : ""}`}
+                    className={`adminUserNav__button ${createSelected ? "button-selected" : ""}`}
                 >
-                    <div className="userNavAdmin__button-label">Create</div>
+                    <div className="adminUserNav__button-label">Create</div>
                 </div>
                 <div
                     onClick={() => {
                         setUpdateSelected(true);
                         setCreateSelected(false);
                     }}
-                    className={`userNavAdmin__button ${updateSelected ? "button-selected" : ""}`}
+                    className={`adminUserNav__button ${updateSelected ? "button-selected" : ""}`}
                 >
-                    <div className="userNavAdmin__button-label">Update</div>
+                    <div className="adminUserNav__button-label">Update</div>
                 </div>
             </div>
         </div>

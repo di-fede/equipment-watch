@@ -8,7 +8,7 @@ const barlow = Barlow_Condensed({
     weight: ["400"],
 });
 export default function NavDash() {
-    const [scanSelected, setScanSelected] = useState(Boolean);
+    const [scanSelected, setScanSelected] = useState(Boolean(true));
     const [usersSelected, setUsersSelected] = useState(Boolean);
     const [adminSelected, setAdminSelected] = useState(Boolean);
 
@@ -36,7 +36,7 @@ export default function NavDash() {
                     <div className="navDash__button-label">Users</div>
                 </div>
                 <Link
-                    href={"/admin"}
+                    href={"/admin/users/create"}
                     onClick={() => {
                         setAdminSelected(true);
                         setScanSelected(false);

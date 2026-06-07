@@ -10,7 +10,7 @@ const barlow = Barlow_Condensed({
 });
 export default function NavAdmin() {
     const [equipmentSelected, setEquipmentSelected] = useState(Boolean);
-    const [usersSelected, setUsersSelected] = useState(Boolean);
+    const [usersSelected, setUsersSelected] = useState(Boolean(true));
     const [adminSelected, setAdminSelected] = useState(Boolean);
 
     return (
@@ -37,7 +37,8 @@ export default function NavAdmin() {
                 >
                     <div className="adminNav__button-label">Equipment</div>
                 </div>
-                <div
+                <Link
+                    href={"/admin/users/create"}
                     onClick={() => {
                         setUsersSelected(true);
                         setEquipmentSelected(false);
@@ -46,7 +47,7 @@ export default function NavAdmin() {
                     className={`adminNav__button ${usersSelected ? "button-selected" : ""}`}
                 >
                     <div className="adminNav__button-label">Users</div>
-                </div>
+                </Link>
             </div>
         </div>
     );

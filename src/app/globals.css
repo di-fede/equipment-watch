@@ -66,13 +66,24 @@ a {
   height: calc(100% - 8rem);
 }
 
+.adminForm {
+  grid-row: 3/7;
+  grid-column: 2/3;
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  height: 50rem;
+}
 .adminForm__grid {
+  grid-row: 2/3;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(5, 1fr);
   align-items: center;
   row-gap: 2px;
-  height: 80%;
 }
 .adminForm__row {
   grid-column: 1/4;
@@ -84,36 +95,49 @@ a {
   background-color: #b4b2b4;
   padding: 1rem;
 }
-
-.newUser {
-  grid-row: 3/7;
-  grid-column: 2/4;
-  justify-self: end;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  width: 100%;
-  height: 50rem;
+.adminForm__error {
+  grid-column: 3/4;
+  color: #e03131;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
-.newUser__container {
+.adminForm__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 8rem 1fr;
+  row-gap: 2px;
   width: 100%;
-  height: calc(100% - 5rem);
-  padding: 0 3rem;
 }
-.newUser__heading {
+.adminForm__heading {
   font-size: 3rem;
   padding: 3rem;
 }
-.newUser__input {
+.adminForm__input {
   grid-column: 2/3;
   width: 25rem;
   height: 4rem;
 }
-.newUser__input-label {
+.adminForm__input-label {
   grid-column: 1/2;
   padding: 2rem;
   font-size: 1.6rem;
+}
+.adminForm__button-container {
+  display: flex;
+  justify-content: end;
+  column-gap: 6rem;
+  grid-column: 2/4;
+}
+.adminForm__button-submit {
+  height: 4rem;
+  border: none;
+  width: 14rem;
+  background-color: #24ade8;
+}
+.adminForm__button-cancel {
+  height: 4rem;
+  border: none;
+  width: 14rem;
 }
 
 .adminNav {
@@ -149,45 +173,37 @@ a {
   background-color: #fff;
 }
 
-.userNavAdmin {
+.adminUserNav {
   grid-column: 1/2;
-  grid-row: 3/6;
+  grid-row: 1/2;
   width: 100%;
   display: flex;
   align-items: center;
-  height: 25rem;
+  height: 100%;
   background-color: #000;
 }
-.userNavAdmin__container {
+.adminUserNav__container {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  gap: 4rem;
   justify-content: center;
   align-items: center;
-  height: 6rem;
+  height: 100%;
 }
-.userNavAdmin__button {
+.adminUserNav__button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20rem;
-  height: 6rem;
-  color: #fff;
+  width: 50%;
+  height: 100%;
+  color: #b3b3b3;
   background-color: #414042;
   font-size: 2.4rem;
-  border: 1px solid white;
   cursor: pointer;
-}
-
-.button-selected {
-  color: #414042;
-  background-color: #fff;
 }
 
 .dash__grid {
   display: grid;
-  grid-template-columns: 1fr 70% 1fr;
+  grid-template-columns: 1fr 80% 1fr;
   grid-template-rows: repeat(7, 1fr);
   align-items: center;
   justify-content: center;
@@ -264,7 +280,7 @@ a {
 }
 
 .button-selected {
-  color: #414042;
+  color: #000;
   background-color: #fff;
 }
 

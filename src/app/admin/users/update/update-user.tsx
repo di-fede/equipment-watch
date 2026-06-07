@@ -14,7 +14,7 @@ const montserrat = Montserrat({
 });
 const mont = montserrat.className;
 
-export default function CreateUser() {
+export default function UpdateUser() {
     const { signup, isLoading } = useSignup();
     const { register, formState, getValues, handleSubmit, reset } = useForm();
     const { errors } = formState;
@@ -61,7 +61,8 @@ export default function CreateUser() {
                             Email address
                         </label>
                         <input
-                            disabled={isLoading}
+                            value={"test@test.com"}
+                            disabled
                             className="adminForm__input"
                             id="email"
                             type="text"
