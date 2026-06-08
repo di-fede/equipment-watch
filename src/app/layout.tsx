@@ -5,6 +5,7 @@ import Header from "./_components-main/header";
 import User from "./_components-main/user";
 import QueryProvider from "./providers";
 import ProtectedRoute from "./ui/protectedRoute";
+import { EquipmentProvider } from "./context/equipmentContext";
 
 // const roboto = Roboto({
 //     style: ["normal"],
@@ -49,8 +50,10 @@ export default function RootLayout({
         <html lang="en">
             <body>
                 <QueryProvider>
-                    <User />
-                    <ProtectedRoute>{children}</ProtectedRoute>
+                    <EquipmentProvider>
+                        <User />
+                        <ProtectedRoute>{children}</ProtectedRoute>
+                    </EquipmentProvider>
                 </QueryProvider>
             </body>
         </html>

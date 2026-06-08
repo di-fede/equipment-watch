@@ -1,0 +1,368 @@
+.scan-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: $color-secondary;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: calc(100% - 8rem);
+        padding: 2rem;
+    }
+
+    //  ──────────────  CAPTURE STATE  ──────────────
+
+    &__capture {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__viewfinder {
+        position: relative;
+        width: 90%;
+        max-width: 36rem;
+        aspect-ratio: 4 / 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid rgba($color-primary, 0.3);
+        border-radius: 1.2rem;
+        background: rgba(0, 0, 0, 0.4);
+        overflow: hidden;
+    }
+
+    &__corner {
+        position: absolute;
+        width: 3rem;
+        height: 3rem;
+        border-color: $color-primary;
+        border-style: solid;
+        border-width: 0;
+
+        &--tl {
+            top: -1px;
+            left: -1px;
+            border-top-width: 3px;
+            border-left-width: 3px;
+            border-top-left-radius: 1.2rem;
+        }
+        &--tr {
+            top: -1px;
+            right: -1px;
+            border-top-width: 3px;
+            border-right-width: 3px;
+            border-top-right-radius: 1.2rem;
+        }
+        &--bl {
+            bottom: -1px;
+            left: -1px;
+            border-bottom-width: 3px;
+            border-left-width: 3px;
+            border-bottom-left-radius: 1.2rem;
+        }
+        &--br {
+            bottom: -1px;
+            right: -1px;
+            border-bottom-width: 3px;
+            border-right-width: 3px;
+            border-bottom-right-radius: 1.2rem;
+        }
+    }
+
+    &__instruction {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+        color: rgba($color-white, 0.7);
+        text-align: center;
+        padding: 2rem;
+
+        p {
+            font-size: 1.6rem;
+            line-height: 1.4;
+        }
+    }
+
+    &__camera-icon {
+        opacity: 0.5;
+    }
+
+    &__file-input {
+        display: none;
+    }
+
+    &__capture-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.2rem;
+        width: 28rem;
+        height: 6rem;
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $color-white;
+        background-color: $color-primary;
+        border: none;
+        border-radius: 0.8rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        // clip-path: polygon(0 0, 100% 0%, 100% 60%, 93% 100%, 0% 100%);
+
+        &:hover {
+            filter: brightness(0.85);
+        }
+        &:active {
+            transform: scale(0.97);
+        }
+    }
+
+    &__capture-btn-ring {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        border: 2px solid $color-white;
+        border-radius: 50%;
+    }
+
+    //  ──────────────  PROCESSING STATE  ──────────────
+
+    &__processing {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2.4rem;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__preview-container {
+        position: relative;
+        width: 90%;
+        max-width: 36rem;
+        border-radius: 1.2rem;
+        overflow: hidden;
+        border: 2px solid rgba($color-primary, 0.4);
+    }
+
+    &__preview-image {
+        width: 100%;
+        display: block;
+    }
+
+    &__scan-line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            $color-primary,
+            transparent
+        );
+        box-shadow: 0 0 12px rgba($color-primary, 0.6);
+        animation: scanMove 2s ease-in-out infinite;
+    }
+
+    &__scan-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.15);
+    }
+
+    &__processing-text {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        color: rgba($color-white, 0.8);
+        font-size: 1.8rem;
+    }
+
+    &__spinner {
+        width: 2.4rem;
+        height: 2.4rem;
+        border: 2px solid rgba($color-primary, 0.3);
+        border-top-color: $color-primary;
+        border-radius: 50%;
+        animation: spinRotate 0.8s linear infinite;
+    }
+
+    //  ──────────────  RESULT STATE  ──────────────
+
+    &__result {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        padding-bottom: 2rem;
+    }
+
+    &__result-image {
+        width: 85%;
+        max-width: 32rem;
+        border-radius: 1rem;
+        border: 2px solid rgba($color-primary, 0.4);
+    }
+
+    &__result-card {
+        width: 90%;
+        max-width: 36rem;
+        background: rgba(0, 0, 0, 0.35);
+        border: 1px solid rgba($color-primary, 0.25);
+        border-radius: 1.2rem;
+        padding: 2.4rem;
+    }
+
+    &__result-title {
+        font-size: 2rem;
+        color: $color-primary;
+        margin-bottom: 2rem;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    &__result-fields {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        margin-bottom: 2.4rem;
+    }
+
+    &__result-field {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        padding: 1.2rem 1.6rem;
+        background: rgba($color-white, 0.05);
+        border-radius: 0.8rem;
+        border-left: 3px solid $color-primary;
+    }
+
+    &__result-label {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        color: rgba($color-white, 0.5);
+    }
+
+    &__result-value {
+        font-size: 2rem;
+        color: $color-white;
+        letter-spacing: 0.5px;
+    }
+
+    &__result-actions,
+    &__error-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    &__confirm-btn {
+        width: 100%;
+        height: 5rem;
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $color-white;
+        background-color: $color-primary;
+        border: none;
+        border-radius: 0.6rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+            filter: brightness(0.85);
+        }
+        &:active {
+            transform: scale(0.98);
+        }
+    }
+
+    &__retry-btn {
+        width: 100%;
+        height: 5rem;
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: rgba($color-white, 0.7);
+        background: transparent;
+        border: 1px solid rgba($color-white, 0.2);
+        border-radius: 0.6rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+            border-color: rgba($color-white, 0.4);
+            color: $color-white;
+        }
+    }
+
+    //  ──────────────  ERROR STATE  ──────────────
+
+    &__error {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__error-card {
+        width: 90%;
+        max-width: 36rem;
+        background: rgba(0, 0, 0, 0.35);
+        border: 1px solid rgba(#ff4d4f, 0.3);
+        border-radius: 1.2rem;
+        padding: 3rem 2.4rem;
+        text-align: center;
+    }
+
+    &__error-icon {
+        color: #ff4d4f;
+        margin-bottom: 1.6rem;
+    }
+
+    &__error-message {
+        font-size: 1.6rem;
+        color: rgba($color-white, 0.8);
+        line-height: 1.5;
+        margin-bottom: 2.4rem;
+    }
+}
+
+//  ──────────────  ANIMATIONS  ──────────────
+
+@keyframes scanMove {
+    0%,
+    100% {
+        top: 0;
+    }
+    50% {
+        top: calc(100% - 3px);
+    }
+}
+
+@keyframes spinRotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
