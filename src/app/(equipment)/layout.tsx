@@ -11,7 +11,7 @@ export default function EquipmentLayout({
     children: React.ReactNode;
 }) {
     return (
-        <div className="main">
+        <div className="equipmentMain">
             <Header />
             <ButtonProvider content="Back" link="/">
                 <BackButton />

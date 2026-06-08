@@ -30,19 +30,20 @@ export default function EquipHeading() {
     });
 
     return (
-        <div className={`top ${montserrat.className}`}>
-            <div className="top__location-container">
-                Location: <div className="top__location">Delray Beach</div>
+        <div className={`equipment ${montserrat.className}`}>
+            <div className="equipment__location-container">
+                Location:{" "}
+                <div className="equipment__location">Delray Beach</div>
             </div>
-            <div className="top__equipId">
-                <div className="top__product-type">
+            <div className="equipment__equipId">
+                <div className="equipment__product-type">
                     <span>Treadmill</span>
                 </div>
-                <div className="top__product-model">The ass kicker</div>
+                <div className="equipment__product-model">The ass kicker</div>
             </div>
-            <div className="top__right">
+            <div className="equipment__right">
                 <div>No.</div>
-                <div className={`top__machineNumber ${roboto.className}`}>
+                <div className={`equipment__machineNumber ${roboto.className}`}>
                     2
                 </div>
             </div>

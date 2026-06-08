@@ -32,12 +32,12 @@
 }
 
 .backBlue {
-    color: #000;
+    color: #fff;
     background-color: $color-primary;
 }
 .backGrey {
-    color: #fff;
-    background-color: $color-secondary;
+    color: $color-dark;
+    background-color: #82828a;
 }
 .checkbox {
     display: none;

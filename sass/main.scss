@@ -10,13 +10,15 @@
 @import "components-dash/dash-header";
 @import "components-dash/dash-nav";
 
-@import "components-home/back-button";
-@import "components-home/home-top";
-@import "components-home/home-form";
-@import "components-home/form-element";
-@import "components-home/header";
-@import "components-home/nav";
-@import "components-home/user";
+@import "components-main/back-button";
+@import "components-main/equipment-top";
+@import "components-main/equipment-form";
+@import "components-main/form-element";
+@import "components-main/header";
+@import "components-main/nav";
+@import "components-main/user";
+
+@import "components-user/password-reset";
 
 @import "page-login/login";
 
