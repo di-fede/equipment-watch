@@ -1,5 +1,7 @@
 import { Barlow_Condensed, Montserrat } from "next/font/google";
 import Logout from "../authentication/logout";
+import TrueFitnessLogo from "./logo-main";
+import LogoSmall from "./logo-small";
 
 const montserrat = Montserrat({
     style: ["normal"],
@@ -16,7 +18,8 @@ export default function Header() {
     return (
         <div className="header">
             <div className="logo-container">
-                <svg
+                <LogoSmall />
+                {/* <svg
                     id="Layer_1"
                     data-name="Layer 1"
                     xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +87,7 @@ export default function Header() {
                             />
                         </g>
                     </g>
-                </svg>
+                </svg> */}
             </div>
             <div className={`header__subTitle ${barlow.className}`}>
                 Equipment Tracker

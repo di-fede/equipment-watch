@@ -4,7 +4,7 @@ import { useForm, FieldValues } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Montserrat } from "next/font/google";
-import { useSignup } from "../../../authentication/useSignup";
+import { useCreateUser } from "../../../authentication/useCreateUser";
 import AdminUserNav from "@/app/_components-admin/admin-userNav";
 
 const montserrat = Montserrat({
@@ -15,12 +15,12 @@ const montserrat = Montserrat({
 const mont = montserrat.className;
 
 export default function CreateUser() {
-    const { signup, isLoading } = useSignup();
+    const { createUser, isPending } = useCreateUser();
     const { register, formState, getValues, handleSubmit, reset } = useForm();
     const { errors } = formState;
 
     function onSubmit({ name, email, password }: FieldValues) {
-        signup({ name, email, password }, { onSettled: () => reset() });
+        createUser({ name, email, password }, { onSettled: () => reset() });
     }
 
     return (
@@ -39,7 +39,7 @@ export default function CreateUser() {
                             Name
                         </label>
                         <input
-                            disabled={isLoading}
+                            disabled={isPending}
                             className="adminForm__input"
                             id="name"
                             type="text"
@@ -61,7 +61,7 @@ export default function CreateUser() {
                             Email address
                         </label>
                         <input
-                            disabled={isLoading}
+                            disabled={isPending}
                             className="adminForm__input"
                             id="email"
                             type="text"
@@ -87,7 +87,7 @@ export default function CreateUser() {
                             Password (min 8 characters)
                         </label>
                         <input
-                            disabled={isLoading}
+                            disabled={isPending}
                             className="adminForm__input"
                             id="password"
                             type="text"
@@ -114,7 +114,7 @@ export default function CreateUser() {
                             Re-enter Password
                         </label>
                         <input
-                            disabled={isLoading}
+                            disabled={isPending}
                             className="adminForm__input"
                             id="passwordConfirm"
                             type="text"
@@ -135,13 +135,13 @@ export default function CreateUser() {
                         <div className="adminForm__button-container">
                             <button
                                 className="adminForm__button-cancel"
-                                disabled={isLoading}
+                                disabled={isPending}
                             >
                                 Cancel
                             </button>
                             <button
                                 className="adminForm__button-submit"
-                                disabled={isLoading}
+                                disabled={isPending}
                             >
                                 Submit
                             </button>

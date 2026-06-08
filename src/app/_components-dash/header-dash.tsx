@@ -1,18 +1,18 @@
 "use client";
 
-import LogoImage from "./logo-image";
-import LogoText from "./logo-text";
 import NavDash from "./nav-dash";
 import { useUser } from "../authentication/useUser";
+import LogoMain from "../_components-main/logo-main";
 
-export default function HeaderDash() {
+export default function DashHeader() {
     const { isAuthenticated } = useUser();
 
     return (
-        <div className="headerDash">
-            <div className="headerDash__logo-container">
-                <LogoImage />
-                <LogoText />
+        <div className="header">
+            <div className="header__logo-container">
+                {/* <LogoImage />
+                <LogoText /> */}
+                <LogoMain />
             </div>
             {isAuthenticated && <NavDash />}
         </div>

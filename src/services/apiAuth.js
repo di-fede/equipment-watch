@@ -54,3 +54,24 @@ export async function updateCurrentUser({ password, name }) {
 
     //2.
 }
+
+export async function createUserAsAdmin({ name, email, password, role = "user" }) {
+    // Get the current session token to authorize the request
+    const { data: sessionData } = await supabase.auth.getSession();
+    const token = sessionData?.session?.access_token;
+
+    if (!token) throw new Error("No active session — please log in again.");
+
+    const res = await fetch("/api/auth/create-user", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ name, email, password, role }),
+    });
+
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Failed to create user");
+    return data.user;
+}

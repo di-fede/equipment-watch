@@ -17,14 +17,12 @@ export default function UpdateUser() {
     const { register, formState, getValues, handleSubmit, reset } = useForm();
     const { errors } = formState;
 
-    const {
-        user: {
-            email,
-            user_metadata: { name: currentName },
-        },
-    } = useUser();
+    const { user } = useUser();
 
-    const [name, setName] = useState(currentName);
+    const email = user?.email;
+    const currentName = user?.user_metadata?.name;
+
+    const [name, setName] = useState(currentName ?? "");
 
     return (
         <div className={`adminForm ${mont}`}>
@@ -60,8 +58,6 @@ export default function UpdateUser() {
                             Email address
                         </label>
                         <input
-                            value={"test@test.com"}
-                            disabled
                             className="adminForm__input"
                             id="email"
                             type="text"

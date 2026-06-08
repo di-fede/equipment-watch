@@ -1,4 +1,5 @@
 import HeaderAdmin from "../_components-admin/header-admin";
+import AdminProtectedRoute from "../ui/adminProtectedRoute";
 
 export default function EquipmentLayout({
     children,
@@ -6,9 +7,11 @@ export default function EquipmentLayout({
     children: React.ReactNode;
 }) {
     return (
-        <div className="dash__grid">
-            <HeaderAdmin />
-            {children}
-        </div>
+        <AdminProtectedRoute>
+            <div className="dash__grid">
+                <HeaderAdmin />
+                {children}
+            </div>
+        </AdminProtectedRoute>
     );
 }
