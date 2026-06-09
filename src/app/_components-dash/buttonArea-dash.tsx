@@ -8,7 +8,6 @@ const barlow = Barlow_Condensed({
 });
 
 export default async function ButtonArea() {
-
     return (
         <div className="start__center-container">
             <div className={`start__button-container ${barlow.className} `}>

@@ -13,9 +13,7 @@ export default function EquipmentLayout({
     return (
         <div className="equipmentMain">
             <Header />
-            <ButtonProvider content="Back" link="/">
-                <BackButton />
-            </ButtonProvider>
+
             <QueryProvider>
                 <EquipHeading />
                 {children}

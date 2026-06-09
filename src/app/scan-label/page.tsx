@@ -6,6 +6,9 @@ import { Barlow_Condensed, Montserrat } from "next/font/google";
 import { useEquipment } from "../context/equipmentContext";
 import supabase from "../../services/supabase";
 import Header from "../_components-main/header";
+import DashHeader from "../_components-dash/header-dash";
+import BackButton from "../_components-main/back-button";
+import { ButtonProvider } from "../context/buttonContext";
 
 const montserrat = Montserrat({
     style: ["normal"],
@@ -40,7 +43,10 @@ export default function ScanLabelPage() {
     };
 
     // Compress image to reduce payload size — phone cameras produce very large files
-    const compressImage = (dataUrl: string, maxWidth = 1500): Promise<string> => {
+    const compressImage = (
+        dataUrl: string,
+        maxWidth = 1500,
+    ): Promise<string> => {
         return new Promise((resolve) => {
             const img = new Image();
             img.onload = () => {
@@ -62,9 +68,7 @@ export default function ScanLabelPage() {
         });
     };
 
-    const handleFileChange = async (
-        e: React.ChangeEvent<HTMLInputElement>,
-    ) => {
+    const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
         const file = e.target.files?.[0];
         if (!file) return;
 
@@ -102,9 +106,7 @@ export default function ScanLabelPage() {
                 setState("result");
             } catch (err) {
                 setErrorMessage(
-                    err instanceof Error
-                        ? err.message
-                        : "Something went wrong",
+                    err instanceof Error ? err.message : "Something went wrong",
                 );
                 setState("error");
             }
@@ -182,6 +184,7 @@ export default function ScanLabelPage() {
     return (
         <div className="scan-page">
             <Header />
+
             <div className={`scan-page__content ${montserrat.className}`}>
                 {/* CAPTURE STATE */}
                 {state === "capture" && (
@@ -204,7 +207,10 @@ export default function ScanLabelPage() {
                                     <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
                                     <circle cx="12" cy="13" r="4" />
                                 </svg>
-                                <p>Position the equipment label within the frame</p>
+                                <p>
+                                    Position the equipment label within the
+                                    frame
+                                </p>
                             </div>
                         </div>
 
@@ -325,12 +331,7 @@ export default function ScanLabelPage() {
                                 >
                                     <circle cx="12" cy="12" r="10" />
                                     <line x1="12" y1="8" x2="12" y2="12" />
-                                    <line
-                                        x1="12"
-                                        y1="16"
-                                        x2="12.01"
-                                        y2="16"
-                                    />
+                                    <line x1="12" y1="16" x2="12.01" y2="16" />
                                 </svg>
                             </div>
                             <p className="scan-page__error-message">

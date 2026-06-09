@@ -92,7 +92,7 @@ a {
   width: 100%;
   height: 8rem;
   align-items: center;
-  background-color: #b4b2b4;
+  background-color: #82828a;
   padding: 1rem;
 }
 .adminForm__error {
@@ -284,13 +284,6 @@ a {
 .button-selected {
   color: #000;
   background-color: #fff;
-}
-
-.back-arrow {
-  display: flex;
-  width: 16px;
-  height: 16px;
-  margin-right: 2px;
 }
 
 .equipment {
@@ -489,8 +482,10 @@ a {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 8rem;
+  height: min-content;
   padding: 2.6rem;
+  grid-row: 1/2;
+  position: relative;
 }
 .header__subTitle {
   display: block;
@@ -499,13 +494,16 @@ a {
   letter-spacing: 1px;
   z-index: 3;
 }
+.header__logo-container {
+  height: 14rem;
+}
 
 .logo-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 30rem;
-  height: 8rem;
+  height: 6rem;
 }
 
 .backToScan {
@@ -515,7 +513,8 @@ a {
   font-size: 1.6rem;
   position: absolute;
   left: 3rem;
-  top: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
   width: 10rem;
   height: 4rem;
   border-radius: 6px;
@@ -526,6 +525,13 @@ a {
     left: 5px;
     width: 6rem;
   }
+}
+
+.back-arrow {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  margin-right: 2px;
 }
 
 .nav {
@@ -898,7 +904,7 @@ a {
   width: 100%;
   height: 8rem;
   align-items: center;
-  background-color: #b4b2b4;
+  background-color: #82828a;
   padding: 1rem;
 }
 .passwordReset__error {
@@ -1014,29 +1020,30 @@ a {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 100%;
+  height: 80%;
 }
 .start__buttonBox {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.4rem;
-  letter-spacing: 1px;
-  width: 30rem;
+  gap: 1.2rem;
+  width: 28rem;
   height: 6rem;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   color: #fff;
   background-color: #24ade8;
-  text-transform: uppercase;
-  clip-path: polygon(0 0, 100% 0%, 100% 60%, 93% 100%, 0% 100%);
   border: none;
-  z-index: 4;
-  transition: all 0.2s;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 .start__buttonBox:hover {
-  filter: brightness(0.8);
+  filter: brightness(0.85);
 }
-.start__buttonBox:visited {
-  filter: brightness(0.8);
+.start__buttonBox:active {
+  transform: scale(0.97);
 }
 .start__button {
   display: flex;
@@ -1053,6 +1060,7 @@ a {
   align-items: center;
   width: 100%;
   height: 100%;
+  background-color: #414042;
 }
 
 .manualForm {
@@ -1063,7 +1071,7 @@ a {
   row-gap: 5rem;
   justify-content: center;
   align-items: center;
-  background-color: #414042;
+  background-color: #82828a;
   padding: 4rem;
 }
 @media screen and (max-width: 600px) {
@@ -1074,7 +1082,8 @@ a {
   }
 }
 .manualForm__heading {
-  font-size: 2rem;
+  font-size: 3rem;
+  margin-bottom: 2rem;
 }
 .manualForm__container {
   display: flex;
@@ -1094,11 +1103,37 @@ a {
   font-size: 2rem;
 }
 .manualForm__submitButton {
-  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  width: 20rem;
+  height: 5rem;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   color: #fff;
   background-color: #24ade8;
   border: none;
-  padding: 5px;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.manualForm__submitButton:hover {
+  filter: brightness(0.85);
+}
+.manualForm__submitButton:active {
+  transform: scale(0.97);
+}
+.manualForm__error {
+  grid-column: 1/-1;
+  color: #7a0000;
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem 1.6rem;
+  background: rgba(255, 77, 79, 0.12);
+  border: 1px solid rgba(255, 77, 79, 0.3);
+  border-radius: 0.6rem;
 }
 .manualForm__backButton {
   display: flex;
@@ -1112,6 +1147,31 @@ a {
   border-radius: 6px;
   border: none;
   background-color: #24ade8;
+}
+
+.or {
+  grid-column: 1/-1;
+  justify-self: center;
+  width: 30rem;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2rem;
+}
+.or::before {
+  display: block;
+  content: "";
+  width: 5rem;
+  height: 1px;
+  background-color: #000;
+}
+.or::after {
+  display: block;
+  content: "";
+  width: 5rem;
+  height: 1px;
+  background-color: #000;
 }
 
 /*# sourceMappingURL=globals.css.map */
