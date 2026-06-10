@@ -13,26 +13,27 @@ export default function AdminUserNav() {
     const pathname = usePathname();
 
     // Default to 'Create' selected if we are on the base route '/admin/users' or specifically '/admin/users/create'
-    const createSelected = pathname === "/admin/users/create" || pathname === "/admin/users";
+    const createSelected =
+        pathname === "/admin/users/create" || pathname === "/admin/users";
     const updateSelected = pathname === "/admin/users/update";
 
     return (
         <div className="adminUserNav">
             <div className={`adminUserNav__container ${barlow.className}`}>
-                <Link
-                    href={"/admin/users/create"}
+                <div
                     className={`adminUserNav__button ${createSelected ? "button-selected" : ""}`}
                 >
-                    <div className="adminUserNav__button-label">Create</div>
-                </Link>
-                <Link
+                    <div className="adminUserNav__button-label">
+                        Create new user
+                    </div>
+                </div>
+                {/* <Link
                     href={"/admin/users/update"}
                     className={`adminUserNav__button ${updateSelected ? "button-selected" : ""}`}
                 >
                     <div className="adminUserNav__button-label">Update</div>
-                </Link>
+                </Link> */}
             </div>
         </div>
     );
 }
-

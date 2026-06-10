@@ -1,11 +1,57 @@
-.adminNav {
+.mainNav__container {
     grid-column: 2/4;
-    grid-row: 3/4;
+    grid-row: 2/3;
     width: 100%;
     display: flex;
     align-items: center;
+    justify-items: center;
     padding: 2rem 0 2rem 0;
+    z-index: 2;
 
+    @media screen and (max-width: 1080px) {
+        align-self: start;
+        padding: 0;
+    }
+
+    @media screen and (max-width: 500px) {
+        width: 50rem;
+    }
+    @media screen and (max-width: 440px) {
+        width: 35rem;
+    }
+}
+
+///////////  DASH  ////////////
+.navDash {
+    &__container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 6rem;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20rem;
+        height: 6rem;
+        color: $color-white;
+        background-color: $color-secondary;
+        font-size: 2.4rem;
+        border: 1px solid white;
+        cursor: pointer;
+    }
+}
+
+.button-selected {
+    color: $color-dark;
+    background-color: $color-white;
+}
+
+///////////  ADMIN  ////////////
+.adminNav {
     &__container {
         width: 100%;
         display: flex;
@@ -56,7 +102,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 50%;
+        width: 100%;
         height: 100%;
         color: #b3b3b3;
         background-color: $color-secondary;

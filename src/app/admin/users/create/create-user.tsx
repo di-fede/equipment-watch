@@ -1,8 +1,6 @@
 "use client";
 
 import { useForm, FieldValues } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import * as z from "zod";
 import { Montserrat } from "next/font/google";
 import { useCreateUser } from "../../../authentication/useCreateUser";
 import AdminUserNav from "@/app/_components-admin/admin-userNav";

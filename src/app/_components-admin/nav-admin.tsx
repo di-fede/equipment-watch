@@ -14,7 +14,7 @@ export default function NavAdmin() {
     const [adminSelected, setAdminSelected] = useState(Boolean);
 
     return (
-        <div className="adminNav">
+        <div className="mainNav__container">
             <div className={`adminNav__container ${barlow.className}`}>
                 <Link
                     href={"/"}
@@ -27,7 +27,8 @@ export default function NavAdmin() {
                 >
                     <div className="adminNav__button-label">Dash</div>
                 </Link>
-                <div
+                <Link
+                    href={"/admin/equipment"}
                     onClick={() => {
                         setEquipmentSelected(true);
                         setUsersSelected(false);
@@ -36,7 +37,7 @@ export default function NavAdmin() {
                     className={`adminNav__button ${equipmentSelected ? "button-selected" : ""}`}
                 >
                     <div className="adminNav__button-label">Equipment</div>
-                </div>
+                </Link>
                 <Link
                     href={"/admin/users/create"}
                     onClick={() => {

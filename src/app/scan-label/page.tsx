@@ -183,7 +183,7 @@ export default function ScanLabelPage() {
 
     return (
         <div className="scan-page">
-            <Header />
+            <DashHeader />
 
             <div className={`scan-page__content ${montserrat.className}`}>
                 {/* CAPTURE STATE */}

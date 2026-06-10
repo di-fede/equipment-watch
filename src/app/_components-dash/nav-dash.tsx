@@ -15,7 +15,7 @@ export default function NavDash() {
     const { isAdmin } = useAdmin();
 
     return (
-        <div className="navDash">
+        <div className="mainNav__container">
             <div className={`navDash__container ${barlow.className}`}>
                 <Link
                     href={"/"}
