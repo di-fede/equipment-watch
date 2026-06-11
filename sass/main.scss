@@ -7,8 +7,6 @@
 
 @import "components-dash/dash-grid";
 
-@import "components-main/equipment-top";
-@import "components-main/form-element";
 @import "components-main/header";
 @import "components-main/user";
 @import "components-main/scan-label";
@@ -16,7 +14,10 @@
 @import "components-user/password-reset";
 
 @import "equipment-page/equipment-form";
+@import "equipment-page/equipment-main";
 @import "equipment-page/equipment-nav";
+@import "equipment-page/equipment-top";
+@import "equipment-page/form-element";
 
 @import "header/nav";
 

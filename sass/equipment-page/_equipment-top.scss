@@ -1,4 +1,6 @@
-.equipment {
+.equipment__details {
+    grid-row: 2/3;
+    grid-column: 1/2;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 95%;

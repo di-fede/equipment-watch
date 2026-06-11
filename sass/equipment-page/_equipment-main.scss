@@ -1,0 +1,15 @@
+.equipment {
+    &__main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(20rem, 20%) 20% 60%;
+        align-items: center;
+        justify-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: $color-secondary;
+    }
+
+    &__details {
+    }
+}

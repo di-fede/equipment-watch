@@ -17,7 +17,7 @@ export default function EquipHeading() {
     const { equipment } = useEquipment();
 
     return (
-        <div className={`equipment ${montserrat.className}`}>
+        <div className={`equipment__details ${montserrat.className}`}>
             <div className="equipment__location-container">
                 Location:{" "}
                 <div className="equipment__location">
