@@ -8,7 +8,7 @@ import AdminUserNav from "@/app/_components-admin/admin-userNav";
 const montserrat = Montserrat({
     style: ["normal"],
     subsets: ["latin"],
-    weight: ["400"],
+    weight: ["600"],
 });
 const mont = montserrat.className;
 

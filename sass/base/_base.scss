@@ -1,8 +1,8 @@
 html {
-    font-size: 62.5%;
-    @include respond(big-desktop) {
-        font-size: 80%;
-    }
+    font-size: 55%;
+    // @include respond(big-desktop) {
+    //     font-size: 80%;
+    // }
 
     @include respond(laptop) {
         font-size: 60%;
@@ -22,7 +22,7 @@ html {
 }
 body {
     position: relative;
-    background-color: $color-dark;
+    background-color: $color-secondary;
     // Support safe areas on notched devices (iPhone etc.)
     padding-top: env(safe-area-inset-top);
     padding-bottom: env(safe-area-inset-bottom);

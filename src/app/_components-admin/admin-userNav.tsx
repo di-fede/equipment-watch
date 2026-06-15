@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 const barlow = Barlow_Condensed({
     style: ["normal"],
     subsets: ["latin"],
-    weight: ["400"],
+    weight: ["600"],
 });
 
 export default function AdminUserNav() {
@@ -20,9 +20,7 @@ export default function AdminUserNav() {
     return (
         <div className="adminUserNav">
             <div className={`adminUserNav__container ${barlow.className}`}>
-                <div
-                    className={`adminUserNav__button ${createSelected ? "button-selected" : ""}`}
-                >
+                <div className={`adminUserNav__button `}>
                     <div className="adminUserNav__button-label">
                         Create new user
                     </div>

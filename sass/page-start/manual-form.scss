@@ -51,6 +51,8 @@
     }
 
     &__submitButton {
+        grid-column: 2/3;
+        justify-self: end;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -63,7 +65,7 @@
         color: $color-white;
         background-color: $color-primary;
         border: none;
-        border-radius: 0.8rem;
+        border-radius: 6px;
         cursor: pointer;
         transition: all 0.2s ease;
         // clip-path: polygon(0 0, 100% 0%, 100% 60%, 93% 100%, 0% 100%);

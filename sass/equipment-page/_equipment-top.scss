@@ -1,16 +1,17 @@
-.equipment__details {
-    grid-row: 2/3;
-    grid-column: 1/2;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 95%;
-    height: 30%;
-    align-items: center;
-    justify-content: center;
-    padding: 2.6rem;
-    color: #fff;
-    background-color: #414042;
-
+.equipment {
+    &__details {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 95%;
+        align-items: center;
+        justify-content: center;
+        padding: 2.6rem;
+        color: #fff;
+        border: 1px solid $color-form;
+        // background-color: #414042;
+    }
     &__box {
         height: 100%;
         width: 100%;
@@ -57,19 +58,14 @@
         grid-column: 2/3;
         grid-row: 3/4;
         display: flex;
+        justify-content: center;
+        width: 100%;
         align-items: baseline;
         justify-self: center;
     }
 
     &__machineNumber {
-        font-size: 12rem;
-
-        @media screen and (max-width: 600px) {
-            font-size: 10rem;
-        }
-        @media screen and (max-height: 800px) {
-            font-size: 10rem;
-        }
+        font-size: 8rem;
     }
 }
 
