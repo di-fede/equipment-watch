@@ -1,7 +1,7 @@
 "use client";
 import { Montserrat } from "next/font/google";
 import { useUser } from "../authentication/useUser";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 const montserrat = Montserrat({
     style: ["normal"],
     subsets: ["latin"],
@@ -9,14 +9,17 @@ const montserrat = Montserrat({
 });
 const mont = montserrat.className;
 export default function PasswordResetUser() {
-    const {
-        user: {
-            email,
-            user_metadata: { name: currentName },
-        },
-    } = useUser();
+    const { user } = useUser();
+    const email = user?.email ?? "";
+    const currentName = user?.user_metadata?.name ?? "";
 
     const [name, setName] = useState(currentName);
+
+    useEffect(() => {
+        if (currentName) {
+            setName(currentName);
+        }
+    }, [currentName]);
     return (
         <div className={`passwordReset ${mont}`}>
             <div className="passwordReset__container">
