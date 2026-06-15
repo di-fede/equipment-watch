@@ -4,7 +4,7 @@ import Link from "next/link";
 const barlow = Barlow_Condensed({
     style: ["normal"],
     subsets: ["latin"],
-    weight: ["600"],
+    weight: ["400"],
 });
 
 export default async function ButtonArea() {

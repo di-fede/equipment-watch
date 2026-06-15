@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 const barlow = Barlow_Condensed({
     style: ["normal"],
     subsets: ["latin"],
-    weight: ["600"],
+    weight: ["400"],
 });
 
 export default function AdminUserNav() {

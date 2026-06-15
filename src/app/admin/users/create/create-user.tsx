@@ -8,7 +8,7 @@ import AdminUserNav from "@/app/_components-admin/admin-userNav";
 const montserrat = Montserrat({
     style: ["normal"],
     subsets: ["latin"],
-    weight: ["600"],
+    weight: ["400"],
 });
 const mont = montserrat.className;
 
@@ -138,7 +138,7 @@ export default function CreateUser() {
                                 Cancel
                             </button>
                             <button
-                                className="adminForm__button-submit"
+                                className="start__buttonBox"
                                 disabled={isPending}
                             >
                                 Submit

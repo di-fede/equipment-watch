@@ -16,6 +16,7 @@ export default function AddEquipment() {
     const [machineNumber, setMachineNumber] = useState(1);
     const [modelName, setModelName] = useState("");
     const [modelNum, setModelNum] = useState("");
+    const [brand, setBrand] = useState("");
     const [serialNumber, setSerialNumber] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
@@ -26,12 +27,13 @@ export default function AddEquipment() {
         setMachineNumber(1);
         setModelName("");
         setModelNum("");
+        setBrand("");
         setSerialNumber("");
         setErrorMessage("");
         setSuccessMessage("");
     }
 
-    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    async function handleSubmit(e: React.SubmitEvent<HTMLFormElement>) {
         e.preventDefault();
         setErrorMessage("");
         setSuccessMessage("");
@@ -49,6 +51,7 @@ export default function AddEquipment() {
                 equipNumber: machineNumber,
                 modelName: modelName.trim() || null,
                 modelNum: modelNum.trim() || null,
+                brand: brand.trim() || null,
                 serialNumber: serialNumber.trim() || null,
             });
 
@@ -129,6 +132,25 @@ export default function AddEquipment() {
                                 ),
                             )}
                         </select>
+                    </div>
+
+                    <div className="adminForm__row">
+                        <label
+                            htmlFor="brand"
+                            className="adminForm__input-label"
+                        >
+                            Brand
+                        </label>
+                        <input
+                            value={brand}
+                            onChange={(e) => {
+                                setBrand(e.target.value);
+                                setErrorMessage("");
+                                setSuccessMessage("");
+                            }}
+                            type="text"
+                            className="adminForm__input"
+                        />
                     </div>
                     <div className="adminForm__row">
                         <label
@@ -214,7 +236,7 @@ export default function AddEquipment() {
                                 Cancel
                             </button>
                             <button
-                                className="adminForm__button-submit"
+                                className="start__buttonBox"
                                 type="submit"
                                 disabled={isLoading}
                             >

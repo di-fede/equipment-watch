@@ -180,16 +180,29 @@ a {
   column-gap: 6rem;
   grid-column: 2/4;
 }
-.adminForm__button-submit {
-  height: 4rem;
-  border: none;
-  width: 14rem;
-  background-color: #24ade8;
-}
 .adminForm__button-cancel {
-  height: 4rem;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  width: 20rem;
+  height: 6rem;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000;
+  background-color: #d7d7d7;
   border: none;
-  width: 14rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.adminForm__button-cancel:hover {
+  filter: brightness(0.85);
+}
+.adminForm__button-cancel:active {
+  transform: scale(0.97);
 }
 
 .dash__grid {
@@ -292,21 +305,15 @@ a {
   right: 1rem;
 }
 
-.scan-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  background-color: #414042;
-}
 .scan-page__content {
+  grid-column: 2/3;
+  grid-row: 4/5;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: calc(100% - 8rem);
+  height: 100%;
   padding: 2rem;
 }
 .scan-page__capture {
@@ -1096,7 +1103,7 @@ a {
 @media screen and (max-width: 600px) {
   .manualForm {
     grid-template-columns: 1fr;
-    row-gap: 3rem;
+    row-gap: 1rem;
     max-width: 95vw;
   }
 }
@@ -1117,9 +1124,20 @@ a {
   height: 5rem;
   font-size: 1.8rem;
 }
+@media screen and (max-width: 600px) {
+  .manualForm__field {
+    grid-column: 1/2;
+    margin-bottom: 2rem;
+  }
+}
 .manualForm__label {
   color: #fff;
   font-size: 2rem;
+}
+@media screen and (max-width: 600px) {
+  .manualForm__label {
+    grid-column: 1/2;
+  }
 }
 .manualForm__submitButton {
   grid-column: 2/3;
@@ -1128,8 +1146,8 @@ a {
   align-items: center;
   justify-content: center;
   gap: 1.2rem;
-  width: 20rem;
-  height: 5rem;
+  width: 28rem;
+  height: 6rem;
   font-size: 2.2rem;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -1145,6 +1163,12 @@ a {
 }
 .manualForm__submitButton:active {
   transform: scale(0.97);
+}
+@media screen and (max-width: 600px) {
+  .manualForm__submitButton {
+    grid-column: 1/2;
+    justify-self: center;
+  }
 }
 .manualForm__error {
   grid-column: 1/-1;

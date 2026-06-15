@@ -10,7 +10,7 @@ import supabase from "../../services/supabase";
 const montserrat = Montserrat({
     style: ["normal"],
     subsets: ["latin"],
-    weight: ["600"],
+    weight: ["400"],
 });
 
 const mont = montserrat.className;
@@ -24,7 +24,7 @@ export default function ManualForm() {
     const router = useRouter();
     const { setEquipment } = useEquipment();
 
-    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    async function handleSubmit(e: React.SubmitEvent<HTMLFormElement>) {
         e.preventDefault();
         setErrorMessage("");
         setIsLoading(true);

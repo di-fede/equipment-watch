@@ -182,7 +182,7 @@ export default function ScanLabelPage() {
     };
 
     return (
-        <div className="scan-page">
+        <div className="scan-page dash__grid">
             <DashHeader />
 
             <div className={`scan-page__content ${montserrat.className}`}>

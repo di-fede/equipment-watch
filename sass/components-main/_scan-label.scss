@@ -1,18 +1,21 @@
 .scan-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background-color: $color-secondary;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // width: 100%;
+    // height: 100%;
+    // background-color: $color-secondary;
 
     &__content {
+        grid-column: 2/3;
+        grid-row: 4/5;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         width: 100%;
-        height: calc(100% - 8rem);
+        // height: calc(100% - 8rem);
+        height: 100%;
         padding: 2rem;
     }
 

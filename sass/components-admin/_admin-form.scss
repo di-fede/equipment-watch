@@ -126,14 +126,35 @@
     }
 
     &__button-submit {
-        height: 4rem;
-        border: none;
-        width: 14rem;
-        background-color: $color-primary;
+        // height: 4rem;
+        // border: none;
+        // width: 14rem;
+        // background-color: $color-primary;
     }
     &__button-cancel {
-        height: 4rem;
+        justify-self: end;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.2rem;
+        width: 20rem;
+        height: 6rem;
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $color-dark;
+        background-color: $color-cancel;
         border: none;
-        width: 14rem;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        // clip-path: polygon(0 0, 100% 0%, 100% 60%, 93% 100%, 0% 100%);
+
+        &:hover {
+            filter: brightness(0.85);
+        }
+        &:active {
+            transform: scale(0.97);
+        }
     }
 }
