@@ -2,6 +2,12 @@
 import { useState } from "react";
 import { useLogin } from "./useLogin";
 import PrimaryButton from "../_components-main/primary-button";
+import { Montserrat } from "next/font/google";
+const montserrat = Montserrat({
+    style: ["normal"],
+    subsets: ["latin"],
+    weight: ["400"],
+});
 export default function LoginForm() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -22,8 +28,8 @@ export default function LoginForm() {
     }
 
     return (
-        <div className="login__form-container">
-            <form onSubmit={handleSubmit}>
+        <div className={`login__form-container ${montserrat.className}`}>
+            <form className="login__form" onSubmit={handleSubmit}>
                 <label className="login__input-label" htmlFor="email">
                     Email
                 </label>
@@ -53,14 +59,7 @@ export default function LoginForm() {
 
                 <button className="start__buttonBox" disabled={isPending}>
                     <div className="start__button">
-                        <span
-                            style={{
-                                fontSize: 12,
-                                textTransform: "none",
-                            }}
-                        >
-                            Login
-                        </span>
+                        <span className="login__buttonSpan">Login</span>
                     </div>
                 </button>
             </form>

@@ -979,23 +979,33 @@ a {
   background-color: #fff;
 }
 
+.login__form {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
 .login__form-container {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 35rem;
-  width: 40rem;
+  width: 28rem;
   background-color: #414042;
 }
 .login__input {
   display: block;
-  width: 30rem;
+  width: 28rem;
   height: 4rem;
   margin-bottom: 2rem;
 }
 .login__input-label {
+  justify-self: start;
   color: #fff;
-  font-size: 1.4rem;
+  font-size: 2rem;
+}
+.login__buttonSpan {
+  font-size: 2rem;
+  text-transform: none;
 }
 
 .start {
