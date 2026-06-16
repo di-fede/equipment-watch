@@ -1,11 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono, Roboto } from "next/font/google";
 import "./globals.css";
-import Header from "./_components-main/header";
 import User from "./_components-main/user";
 import QueryProvider from "./providers";
 import ProtectedRoute from "./ui/protectedRoute";
 import { EquipmentProvider } from "./context/equipmentContext";
+import toast, { Toaster } from "react-hot-toast";
 
 // const roboto = Roboto({
 //     style: ["normal"],
@@ -55,6 +54,26 @@ export default function RootLayout({
                         <ProtectedRoute>{children}</ProtectedRoute>
                     </EquipmentProvider>
                 </QueryProvider>
+                <Toaster
+                    position="top-center"
+                    gutter={12}
+                    containerStyle={{
+                        margin: "8px",
+                    }}
+                    toastOptions={{
+                        success: {
+                            duration: 3000,
+                        },
+                        error: {
+                            duration: 5000,
+                        },
+                        style: {
+                            fontSize: "16px",
+                            maxWidth: "500px",
+                            padding: "16px 24px",
+                        },
+                    }}
+                />
             </body>
         </html>
     );

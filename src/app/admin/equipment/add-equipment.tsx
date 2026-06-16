@@ -3,6 +3,7 @@
 import { Montserrat } from "next/font/google";
 import { useState } from "react";
 import supabase from "@/services/supabase";
+import toast from "react-hot-toast";
 
 const montserrat = Montserrat({
     style: ["normal"],
@@ -59,8 +60,8 @@ export default function AddEquipment() {
                 setErrorMessage(`Failed to add equipment: ${error.message}`);
                 return;
             }
-
-            setSuccessMessage("Equipment added successfully!");
+            toast.success("Equipment added successfully!");
+            // setSuccessMessage("Equipment added successfully!");
             resetForm();
         } catch (err) {
             setErrorMessage("An unexpected error occurred. Please try again.");

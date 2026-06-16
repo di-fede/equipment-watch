@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useLogin } from "./useLogin";
 import PrimaryButton from "../_components-main/primary-button";
 import { Montserrat } from "next/font/google";
+import toast from "react-hot-toast";
 const montserrat = Montserrat({
     style: ["normal"],
     subsets: ["latin"],
@@ -23,6 +24,8 @@ export default function LoginForm() {
                     setEmail("");
                     setPassword("");
                 },
+                onError: (err) => toast.error(err.message),
+                onSuccess: () => toast.success("Login Successful"),
             },
         );
     }
