@@ -14,7 +14,6 @@ export default function DashHeader() {
                 <LogoText /> */}
                 <LogoMain />
             </div>
-            {isAuthenticated && <NavDash />}
         </div>
     );
 }

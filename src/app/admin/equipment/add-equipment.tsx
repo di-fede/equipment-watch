@@ -237,7 +237,7 @@ export default function AddEquipment() {
                                 Cancel
                             </button>
                             <button
-                                className="start__buttonBox"
+                                className="buttonPrimary"
                                 type="submit"
                                 disabled={isLoading}
                             >

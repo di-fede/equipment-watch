@@ -3,7 +3,6 @@
 import { createContext, useContext, ReactNode } from "react";
 
 interface ButtonContextType {
-    content: string;
     link: string;
 }
 
@@ -13,11 +12,10 @@ interface ButtonProviderProps extends ButtonContextType {
 
 const ButtonContext = createContext<ButtonContextType | undefined>(undefined);
 
-function ButtonProvider({ content, link, children }: ButtonProviderProps) {
+function ButtonProvider({ link, children }: ButtonProviderProps) {
     return (
         <ButtonContext.Provider
             value={{
-                content,
                 link,
             }}
         >

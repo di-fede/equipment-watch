@@ -138,7 +138,7 @@ export default function CreateUser() {
                                 Cancel
                             </button>
                             <button
-                                className="start__buttonBox"
+                                className="buttonPrimary"
                                 disabled={isPending}
                             >
                                 Submit

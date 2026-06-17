@@ -28,6 +28,7 @@ body {
 
 html,
 body {
+  position: relative;
   max-width: 100vw;
   overflow-x: hidden;
   height: 100dvh;
@@ -59,6 +60,71 @@ a {
   align-items: center;
   width: 100%;
   height: calc(100% - 8rem);
+}
+
+.backToScan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 1000px;
+  background-color: #fff;
+  transform: translate(0, -50%);
+  opacity: 0;
+  transition: all 0.3s;
+}
+@media screen and (max-width: 420px) {
+  .backToScan {
+    left: 5px;
+    width: 6rem;
+  }
+}
+
+.back-arrow {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  margin-right: 2px;
+}
+
+.backButtonShow {
+  opacity: 1;
+  transform: translate(-70px, -50%);
+}
+
+.buttonPrimary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  width: 28rem;
+  height: 6rem;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #24ade8;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 2.6rem;
+  letter-spacing: 1px;
+}
+.buttonPrimary:hover {
+  filter: brightness(0.85);
+}
+.buttonPrimary:active {
+  transform: scale(0.97);
+}
+.buttonPrimary__label {
+  display: flex;
+  align-items: center;
 }
 
 .adminUserNav {
@@ -94,6 +160,7 @@ a {
 .adminForm {
   grid-row: 3/7;
   grid-column: 2/3;
+  align-self: start;
   justify-self: end;
   display: flex;
   flex-direction: column;
@@ -194,7 +261,7 @@ a {
   color: #000;
   background-color: #d7d7d7;
   border: none;
-  border-radius: 6px;
+  border-radius: 100px;
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -267,34 +334,6 @@ a {
   height: 6rem;
 }
 
-.backToScan {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.6rem;
-  position: absolute;
-  left: 3rem;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 10rem;
-  height: 4rem;
-  border-radius: 6px;
-  background-color: #24ade8;
-}
-@media screen and (max-width: 420px) {
-  .backToScan {
-    left: 5px;
-    width: 6rem;
-  }
-}
-
-.back-arrow {
-  display: flex;
-  width: 16px;
-  height: 16px;
-  margin-right: 2px;
-}
-
 .user {
   color: #fff;
   font-size: 2rem;
@@ -307,13 +346,15 @@ a {
 
 .scan-page__content {
   grid-column: 2/3;
-  grid-row: 4/5;
+  grid-row: 3/6;
   display: flex;
+  justify-self: center;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  width: 40rem;
+  height: 70%;
   padding: 2rem;
 }
 .scan-page__capture {
@@ -400,13 +441,13 @@ a {
   gap: 1.2rem;
   width: 28rem;
   height: 6rem;
-  font-size: 2.2rem;
+  font-size: 2.6rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #fff;
   background-color: #24ade8;
   border: none;
-  border-radius: 0.8rem;
+  border-radius: 100px;
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -612,6 +653,112 @@ a {
     transform: rotate(360deg);
   }
 }
+.adminNav__container {
+  width: 23rem;
+  height: 6.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2rem;
+  border-radius: 1000px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.adminNav__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6rem;
+  height: 6rem;
+  color: #fff;
+  background-color: transparent;
+  font-size: 2.4rem;
+  border-radius: 1000px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.button-selected {
+  color: #000;
+  background-color: #fff;
+}
+
+.bottomNavContainer {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%, 0);
+  display: flex;
+  justify-content: center;
+  grid-column: 2/3;
+  grid-row: 7/8;
+}
+
+.navDash__container {
+  width: max-content;
+  height: 6.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2rem;
+  border-radius: 1000px;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 3;
+}
+.navDash__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6rem;
+  height: 6rem;
+  color: #fff;
+  background-color: transparent;
+  font-size: 2.4rem;
+  margin: 5px;
+  cursor: pointer;
+  transition: all 0.4s;
+  border-radius: 50%;
+}
+.navDash__button-label {
+  width: 24px;
+  height: 24px;
+}
+
+.button-selected {
+  color: #000;
+  background-color: #fff;
+}
+
+.mainNav__container {
+  position: relative;
+  width: 23rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0 2rem 0;
+}
+@media screen and (max-width: 1080px) {
+  .mainNav__container {
+    align-self: start;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .mainNav__container {
+    width: 50rem;
+  }
+}
+@media screen and (max-width: 440px) {
+  .mainNav__container {
+    width: 35rem;
+  }
+}
+
+.navSvg {
+  width: 20px;
+  height: 20px;
+  fill: red;
+}
+
 .passwordReset {
   grid-row: 3/7;
   grid-column: 2/3;
@@ -902,83 +1049,6 @@ a {
   color: white;
 }
 
-.mainNav__container {
-  grid-column: 2/4;
-  grid-row: 2/3;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  padding: 2rem 0 2rem 0;
-  z-index: 2;
-}
-@media screen and (max-width: 1080px) {
-  .mainNav__container {
-    align-self: start;
-    padding: 0;
-  }
-}
-@media screen and (max-width: 500px) {
-  .mainNav__container {
-    width: 50rem;
-  }
-}
-@media screen and (max-width: 440px) {
-  .mainNav__container {
-    width: 35rem;
-  }
-}
-
-.navDash__container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 6rem;
-}
-.navDash__button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 20rem;
-  height: 6rem;
-  color: #fff;
-  background-color: #414042;
-  font-size: 2.4rem;
-  border: 1px solid white;
-  cursor: pointer;
-}
-
-.button-selected {
-  color: #000;
-  background-color: #fff;
-}
-
-.adminNav__container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 6rem;
-}
-.adminNav__button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 20rem;
-  height: 6rem;
-  color: #fff;
-  background-color: #000;
-  font-size: 2.4rem;
-  border: 1px solid white;
-  cursor: pointer;
-}
-
-.button-selected {
-  color: #414042;
-  background-color: #fff;
-}
-
 .login__form {
   display: grid;
   grid-template-columns: 1fr;
@@ -1004,7 +1074,6 @@ a {
   font-size: 2rem;
 }
 .login__buttonSpan {
-  font-size: 2rem;
   text-transform: none;
 }
 
@@ -1056,47 +1125,12 @@ a {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 80%;
-}
-.start__buttonBox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.2rem;
-  width: 28rem;
-  height: 6rem;
-  font-size: 2.2rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #fff;
-  background-color: #24ade8;
-  border: none;
-  border-radius: 0.8rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-.start__buttonBox:hover {
-  filter: brightness(0.85);
-}
-.start__buttonBox:active {
-  transform: scale(0.97);
-}
-.start__button {
-  display: flex;
-  align-items: center;
+  width: 40rem;
+  height: 70%;
 }
 
 .hovClick {
   background-color: #1b8abd;
-}
-
-.page__manualForm {
-  display: grid;
-  grid-template-rows: 8rem 1fr;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  background-color: #414042;
 }
 
 .manualForm {
@@ -1123,10 +1157,12 @@ a {
   margin-bottom: 2rem;
 }
 .manualForm__container {
+  grid-column: 2/3;
+  grid-row: 3/6;
+  align-self: start;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20rem;
 }
 .manualForm__heading {
   color: #fff;
@@ -1159,13 +1195,13 @@ a {
   gap: 1.2rem;
   width: 28rem;
   height: 6rem;
-  font-size: 2.2rem;
+  font-size: 2.6rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #fff;
   background-color: #24ade8;
   border: none;
-  border-radius: 6px;
+  border-radius: 100px;
   cursor: pointer;
   transition: all 0.2s ease;
 }

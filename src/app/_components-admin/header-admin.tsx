@@ -16,7 +16,6 @@ export default function HeaderAdmin() {
                 <LogoText /> */}
                 <TrueFitnessLogo />
             </div>
-            {isAuthenticated && <NavAdmin />}
         </div>
     );
 }

@@ -11,10 +11,10 @@ export default async function ButtonArea() {
     return (
         <div className="start__center-container">
             <div className={`start__button-container ${barlow.className} `}>
-                <Link href={"/scan-label"} className="start__buttonBox">
+                <Link href={"/scan-label"} className="buttonPrimary">
                     <div className="start__button">Scan Label</div>
                 </Link>
-                <Link href={"/manual-form"} className="start__buttonBox">
+                <Link href={"/manual-form"} className="buttonPrimary">
                     <div className="start__button">Enter Manually</div>
                 </Link>
             </div>

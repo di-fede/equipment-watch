@@ -5,6 +5,7 @@ import QueryProvider from "./providers";
 import ProtectedRoute from "./ui/protectedRoute";
 import { EquipmentProvider } from "./context/equipmentContext";
 import toast, { Toaster } from "react-hot-toast";
+import BottomNavContainer from "./_components-dash/bottomNavContainer";
 
 // const roboto = Roboto({
 //     style: ["normal"],
@@ -52,6 +53,7 @@ export default function RootLayout({
                     <EquipmentProvider>
                         <User />
                         <ProtectedRoute>{children}</ProtectedRoute>
+                        <BottomNavContainer />
                     </EquipmentProvider>
                 </QueryProvider>
                 <Toaster

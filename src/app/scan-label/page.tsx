@@ -9,6 +9,7 @@ import Header from "../_components-main/header";
 import DashHeader from "../_components-dash/header-dash";
 import BackButton from "../_components-main/back-button";
 import { ButtonProvider } from "../context/buttonContext";
+import BottomNavContainer from "../_components-dash/bottomNavContainer";
 
 const montserrat = Montserrat({
     style: ["normal"],

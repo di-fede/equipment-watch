@@ -6,7 +6,7 @@ import DashHeader from "../_components-dash/header-dash";
 
 export default function Page() {
     return (
-        <div className="page__manualForm">
+        <div className="dash__grid">
             <DashHeader />
             <ManualForm />
         </div>

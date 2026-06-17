@@ -1,0 +1,78 @@
+.bottomNavContainer {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%, 0);
+    display: flex;
+    justify-content: center;
+    grid-column: 2/3;
+    grid-row: 7/8;
+}
+.navDash {
+    &__container {
+        width: max-content;
+        height: 6.6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 2rem;
+        border-radius: 1000px;
+        background-color: rgba($color: #fff, $alpha: 0.5);
+        z-index: 3;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // width: 20rem;
+        width: 6rem;
+        height: 6rem;
+        color: $color-white;
+        // background-color: $color-secondary;
+        background-color: transparent;
+        font-size: 2.4rem;
+        margin: 5px;
+        // border: 1px solid white;
+        cursor: pointer;
+        transition: all 0.4s;
+        border-radius: 50%;
+        &-label {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+.button-selected {
+    color: $color-dark;
+    background-color: $color-white;
+}
+
+.mainNav__container {
+    position: relative;
+
+    width: 23rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0 2rem 0;
+
+    @media screen and (max-width: 1080px) {
+        align-self: start;
+        padding: 0;
+    }
+
+    @media screen and (max-width: 500px) {
+        width: 50rem;
+    }
+    @media screen and (max-width: 440px) {
+        width: 35rem;
+    }
+}
+
+.navSvg {
+    width: 20px;
+    height: 20px;
+    fill: red;
+}

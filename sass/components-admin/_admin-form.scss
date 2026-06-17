@@ -35,6 +35,7 @@
 .adminForm {
     grid-row: 3/7;
     grid-column: 2/3;
+    align-self: start;
     justify-self: end;
     display: flex;
     flex-direction: column;
@@ -145,7 +146,7 @@
         color: $color-dark;
         background-color: $color-cancel;
         border: none;
-        border-radius: 6px;
+        border-radius: 100px;
         cursor: pointer;
         transition: all 0.2s ease;
         // clip-path: polygon(0 0, 100% 0%, 100% 60%, 93% 100%, 0% 100%);
