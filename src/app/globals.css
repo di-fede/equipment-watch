@@ -736,22 +736,6 @@ a {
   justify-content: center;
   padding: 2rem 0 2rem 0;
 }
-@media screen and (max-width: 1080px) {
-  .mainNav__container {
-    align-self: start;
-    padding: 0;
-  }
-}
-@media screen and (max-width: 500px) {
-  .mainNav__container {
-    width: 50rem;
-  }
-}
-@media screen and (max-width: 440px) {
-  .mainNav__container {
-    width: 35rem;
-  }
-}
 
 .navSvg {
   width: 20px;
