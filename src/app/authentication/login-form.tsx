@@ -60,7 +60,7 @@ export default function LoginForm() {
                     disabled={isPending}
                 />
 
-                <button className="buttonPrimary" disabled={isPending}>
+                <button className="buttonPrimary__dash" disabled={isPending}>
                     <div className="start__button">
                         <span className="login__buttonSpan">Login</span>
                     </div>

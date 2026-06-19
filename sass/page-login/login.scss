@@ -1,7 +1,4 @@
 .login {
-    &__center-container {
-    }
-
     &__form {
         display: grid;
         grid-template-columns: 1fr;
@@ -11,9 +8,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 35rem;
-        width: 28rem;
-        background-color: $color-secondary;
+        height: 350px;
+        width: 340px;
+        background-color: $color-form;
     }
 
     &__input {
@@ -27,6 +24,10 @@
             color: $color-white;
             font-size: 2rem;
         }
+    }
+
+    &__password {
+        margin-bottom: 4rem;
     }
 
     &__buttonSpan {

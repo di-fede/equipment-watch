@@ -78,6 +78,9 @@ export default function AddEquipment() {
     return (
         <div className={`adminForm ${mont}`}>
             <div className="adminForm__container">
+                <div className="adminForm__headingContainer">
+                    <span>Add equipment</span>
+                </div>
                 <form
                     className="adminForm__grid adminForm__create-form"
                     onSubmit={handleSubmit}

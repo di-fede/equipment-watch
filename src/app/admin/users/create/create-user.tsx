@@ -24,7 +24,9 @@ export default function CreateUser() {
     return (
         <div className={`adminForm ${mont}`}>
             <div className="adminForm__container">
-                <AdminUserNav />
+                <div className="adminForm__headingContainer">
+                    <span>Create new user</span>
+                </div>
                 <form
                     onSubmit={handleSubmit(onSubmit)}
                     className="adminForm__grid adminForm__create-form"

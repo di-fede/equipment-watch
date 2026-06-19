@@ -9,6 +9,7 @@
     height: 100%;
     align-self: start;
     justify-items: center;
+    background-color: $color-secondary;
 
     @media screen and (max-width: 500px) {
         grid-template-rows: 10rem min-content;
