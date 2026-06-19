@@ -1,5 +1,5 @@
 import HeaderAdmin from "../_components-admin/header-admin";
-import DashHeader from "../_components-dash/header-dash";
+import DashHeader from "../_components-main/header";
 
 export default function EquipmentLayout({
     children,

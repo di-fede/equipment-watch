@@ -42,7 +42,10 @@
     justify-content: center;
     align-items: start;
     width: 100%;
-    height: 50rem;
+
+    @media screen and (max-height: 980px) {
+        grid-row: 2/6;
+    }
 
     &__grid {
         grid-row: 2/3;
@@ -62,6 +65,10 @@
         align-items: center;
         background-color: $color-form;
         padding: 1rem;
+
+        @media screen and (max-height: 824px) {
+            height: 7rem;
+        }
     }
 
     &__error {
@@ -74,9 +81,10 @@
     &__container {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 8rem 1fr;
+        grid-template-rows: 4rem 1fr;
         row-gap: 2px;
         width: 100%;
+        height: max-content;
     }
 
     &__heading {
@@ -156,6 +164,12 @@
         }
         &:active {
             transform: scale(0.97);
+        }
+
+        @media screen and (max-height: 824px) {
+            height: 5rem;
+            width: 18rem;
+            font-size: 2rem;
         }
     }
 }

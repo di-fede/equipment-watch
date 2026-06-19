@@ -3,7 +3,7 @@ import Nav from "../_components-main/nav";
 import BackButton from "../_components-main/back-button";
 import { ButtonProvider } from "../context/buttonContext";
 import QueryProvider from "../providers";
-import DashHeader from "../_components-dash/header-dash";
+import DashHeader from "../_components-main/header";
 
 export default function EquipmentLayout({
     children,

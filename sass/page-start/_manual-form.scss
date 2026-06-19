@@ -10,6 +10,10 @@
     background-color: #82828a;
     padding: 4rem;
 
+    @media screen and (max-height: 760px) {
+        row-gap: 1rem;
+    }
+
     @media screen and (max-width: 600px) {
         grid-template-columns: 1fr;
         row-gap: 1rem;
@@ -28,6 +32,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @media screen and (max-height: 870px) {
+            grid-row: 2/6;
+        }
     }
 
     &__heading {
