@@ -30,11 +30,19 @@ body {
 }
 html,
 body {
-    position: relative;
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: max-content 1fr max-content;
     max-width: 100vw;
     overflow-x: hidden;
     // Use dvh so height adapts when mobile browser chrome appears/disappears
-    height: 100dvh;
+    // height: 100dvh;
+    height: 100vh;
+    background: linear-gradient(
+        to bottom,
+        $color-white 70%,
+        rgba($color: #414042, $alpha: 0.1) 90%
+    );
 }
 
 * {

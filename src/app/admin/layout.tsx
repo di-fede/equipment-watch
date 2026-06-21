@@ -10,7 +10,6 @@ export default function EquipmentLayout({
     return (
         <AdminProtectedRoute>
             <div className="dash__grid">
-                <HeaderAdmin />
                 {children}
                 {/* <BottomNavAdmin /> */}
             </div>

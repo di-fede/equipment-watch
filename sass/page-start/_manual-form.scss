@@ -28,15 +28,10 @@
 
     &__container {
         grid-column: 2/3;
-        grid-row: 3/6;
-        align-self: start;
+        grid-row: 1/7;
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        @media screen and (max-height: 870px) {
-            grid-row: 2/6;
-        }
     }
 
     &__heading {

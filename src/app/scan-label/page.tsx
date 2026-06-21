@@ -5,8 +5,6 @@ import { useRouter } from "next/navigation";
 import { Barlow_Condensed, Montserrat } from "next/font/google";
 import { useEquipment } from "../context/equipmentContext";
 import supabase from "../../services/supabase";
-import Header from "../_components-main/header";
-import DashHeader from "../_components-main/header";
 import BackButton from "../_components-main/back-button";
 import { ButtonProvider } from "../context/buttonContext";
 import BottomNavContainer from "../_components-dash/bottomNavContainer";
@@ -184,8 +182,6 @@ export default function ScanLabelPage() {
 
     return (
         <div className="scan-page dash__grid">
-            <DashHeader />
-
             <div className={`scan-page__content ${montserrat.className}`}>
                 {/* CAPTURE STATE */}
                 {state === "capture" && (

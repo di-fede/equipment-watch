@@ -1,12 +1,8 @@
 .bottomNavContainer {
-    position: absolute;
-    left: 50%;
-    bottom: 20px;
-    transform: translate(-50%, 0);
+    grid-row: 3/4;
     display: flex;
     justify-content: center;
-    grid-column: 2/3;
-    grid-row: 7/8;
+    background-color: transparent;
 }
 .navDash {
     &__container {
