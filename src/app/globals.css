@@ -202,6 +202,8 @@ a {
   justify-content: center;
   align-items: start;
   width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
 }
 @media screen and (max-height: 980px) {
   .adminForm {
@@ -345,7 +347,7 @@ a {
 .dash__grid {
   display: grid;
   grid-template-columns: 1fr 80% 1fr;
-  grid-template-rows: repeat(7, 1fr);
+  grid-template-rows: max-content repeat(6, 1fr);
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -378,7 +380,7 @@ a {
 }
 .header__logo-container {
   grid-column: 2/4;
-  grid-row: 1/2;
+  align-self: center;
   display: flex;
   align-items: center;
   width: 100%;
@@ -396,6 +398,8 @@ a {
   width: 100%;
   height: 100%;
   pointer-events: none;
+  padding: 1rem;
+  margin-top: 1rem;
 }
 
 .logo-container {
@@ -1213,6 +1217,7 @@ a {
   align-items: center;
   background-color: #82828a;
   padding: 4rem;
+  border-radius: 6px;
 }
 @media screen and (max-height: 760px) {
   .manualForm {
