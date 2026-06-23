@@ -84,7 +84,7 @@ export default function CreateUser() {
                             className="adminForm__input-label"
                             htmlFor="password"
                         >
-                            Password (min 8 characters)
+                            Password
                         </label>
                         <input
                             disabled={isPending}

@@ -12,8 +12,6 @@ export default function EquipmentLayout({
 }) {
     return (
         <div className="equipment__main">
-            <DashHeader />
-
             <QueryProvider>
                 <EquipHeading />
                 {children}

@@ -18,12 +18,12 @@ export default function EquipHeading() {
 
     return (
         <div className={`equipment__details ${montserrat.className}`}>
-            <div className="equipment__location-container">
+            {/* <div className="equipment__location-container">
                 Location :{" "}
                 <div className="equipment__location">
                     {equipment?.location ?? "—"}
                 </div>
-            </div>
+            </div> */}
             <div className="equipment__equipId">
                 <div className="equipment__product-type">
                     <span>{equipment?.type ?? "—"} :</span>

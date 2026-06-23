@@ -1,6 +1,6 @@
 .equipment {
     &__details {
-        grid-row: 2/3;
+        grid-row: 1/2;
         grid-column: 1/2;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -10,7 +10,7 @@
         padding: 2.6rem;
         color: #fff;
         border: 1px solid $color-form;
-        // background-color: #414042;
+        background-color: $color-secondary;
     }
     &__box {
         height: 100%;
@@ -65,7 +65,7 @@
     }
 
     &__machineNumber {
-        font-size: 8rem;
+        font-size: 6rem;
     }
 }
 
