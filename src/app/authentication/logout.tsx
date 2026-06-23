@@ -1,9 +1,13 @@
 "use client";
 import { useLogout } from "./useLogout";
-export default function Logout() {
+export default function Logout({ showLogout }: { showLogout: boolean }) {
     const { logout, isLoading } = useLogout();
     return (
-        <button disabled={isLoading} onClick={() => logout()}>
+        <button
+            className={`logout__button ${showLogout ? "logout__button-show" : ""}`}
+            disabled={isLoading}
+            onClick={() => logout()}
+        >
             Logout
         </button>
     );

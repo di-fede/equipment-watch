@@ -78,10 +78,6 @@
         color: $color-white;
         background-color: $color-secondary;
         font-size: 2rem;
-
-        @media screen and (max-height: 824px) {
-            height: 7rem;
-        }
     }
     &__error {
         grid-column: 3/4;
@@ -144,6 +140,10 @@
         justify-content: end;
         column-gap: 6rem;
         grid-column: 2/4;
+
+        @media screen and (max-width: 700px) {
+            grid-column: 1/4;
+        }
     }
 
     &__button-submit {
@@ -176,6 +176,9 @@
         }
         &:active {
             transform: scale(0.97);
+        }
+        @media screen and (max-width: 360px) {
+            font-size: 1.8rem;
         }
 
         @media screen and (max-height: 824px) {

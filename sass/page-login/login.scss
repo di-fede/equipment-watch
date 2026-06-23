@@ -5,12 +5,17 @@
         justify-items: center;
     }
     &__form-container {
+        grid-column: 2/3;
+        grid-row: 1/6;
+        align-self: center;
+        justify-self: center;
         display: flex;
         align-items: center;
         justify-content: center;
         height: 350px;
         width: 340px;
         background-color: $color-form;
+        border-radius: 6px;
     }
 
     &__input {

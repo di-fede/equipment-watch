@@ -6,10 +6,7 @@ import HeaderDash from "../_components-main/header";
 export default function Login() {
     return (
         <div className="dash__grid">
-            <HeaderDash />{" "}
-            <div className="start__center-container login__center-container">
-                <LoginForm />
-            </div>
+            <LoginForm />
         </div>
     );
 }

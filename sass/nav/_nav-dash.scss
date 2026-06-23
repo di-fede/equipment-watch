@@ -5,16 +5,48 @@
     background-color: transparent;
 }
 .navDash {
-    &__container {
+    &__grid {
         width: max-content;
-        height: 6.6rem;
-        display: flex;
-        justify-content: center;
+        height: 7rem;
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        column-gap: 4rem;
         align-items: center;
-        column-gap: 2rem;
+        justify-content: center;
         border-radius: 1000px;
         background-color: rgba($color: #fff, $alpha: 0.5);
         z-index: 3;
+
+        &-admin {
+            width: max-content;
+            height: 7rem;
+            display: grid;
+            grid-template-columns: repeat(3, max-content);
+            column-gap: 4rem;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1000px;
+            background-color: rgba($color: #fff, $alpha: 0.5);
+            z-index: 3;
+        }
+    }
+
+    &__buttonBox {
+        height: 6rem;
+        width: 6rem;
+
+        &:first-child {
+            margin-left: 5px;
+        }
+
+        &:last-child {
+            margin-right: 5px;
+        }
+    }
+
+    &__userButtonBox {
+        position: relative;
+        z-index: 2;
     }
 
     &__button {
@@ -22,17 +54,17 @@
         align-items: center;
         justify-content: center;
         // width: 20rem;
-        width: 6rem;
-        height: 6rem;
+        width: 100%;
+        height: 100%;
         color: $color-white;
         // background-color: $color-secondary;
         background-color: transparent;
         font-size: 2.4rem;
-        margin: 5px;
         // border: 1px solid white;
         cursor: pointer;
         transition: all 0.4s;
         border-radius: 50%;
+        z-index: 2;
         &-label {
             width: 24px;
             height: 24px;

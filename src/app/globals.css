@@ -32,7 +32,7 @@ body {
   grid-template-rows: max-content 1fr max-content;
   max-width: 100vw;
   overflow-x: hidden;
-  height: 100vh;
+  height: 100dvh;
   background: linear-gradient(to bottom, #fff 70%, rgba(65, 64, 66, 0.1) 90%);
 }
 
@@ -99,6 +99,38 @@ a {
   transform: translate(-70px, -50%);
 }
 
+.logout__button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 50px;
+  width: 50px;
+  border-radius: 1000px;
+  border: none;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.3s;
+}
+.logout__button-show {
+  top: -60px;
+  opacity: 1;
+  z-index: 2;
+}
+.logout__button-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+}
+.logout__button-background-show {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  pointer-events: all;
+  z-index: 1;
+}
+
 .buttonPrimary {
   display: flex;
   align-items: center;
@@ -133,6 +165,11 @@ a {
     height: 5rem;
     width: 24rem;
     font-size: 2rem;
+  }
+}
+@media screen and (max-width: 360px) {
+  .buttonPrimary {
+    font-size: 1.8rem;
   }
 }
 
@@ -241,11 +278,6 @@ a {
   background-color: #414042;
   font-size: 2rem;
 }
-@media screen and (max-height: 824px) {
-  .adminForm__headingContainer {
-    height: 7rem;
-  }
-}
 .adminForm__error {
   grid-column: 3/4;
   color: #e03131;
@@ -307,6 +339,11 @@ a {
   column-gap: 6rem;
   grid-column: 2/4;
 }
+@media screen and (max-width: 700px) {
+  .adminForm__button-container {
+    grid-column: 1/4;
+  }
+}
 .adminForm__button-cancel {
   justify-self: end;
   display: flex;
@@ -331,6 +368,11 @@ a {
 .adminForm__button-cancel:active {
   transform: scale(0.97);
 }
+@media screen and (max-width: 360px) {
+  .adminForm__button-cancel {
+    font-size: 1.8rem;
+  }
+}
 @media screen and (max-height: 824px) {
   .adminForm__button-cancel {
     height: 5rem;
@@ -347,6 +389,7 @@ a {
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: 100%;
 }
 
 .header {
@@ -724,14 +767,25 @@ a {
 }
 .adminNav__container {
   width: max-content;
-  height: 6.6rem;
-  display: flex;
+  height: 7rem;
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
   justify-content: center;
   align-items: center;
-  column-gap: 2rem;
+  column-gap: 4rem;
   border-radius: 1000px;
   background-color: rgba(255, 255, 255, 0.5);
   z-index: 3;
+}
+.adminNav__buttonBox {
+  height: 6rem;
+  width: 6rem;
+}
+.adminNav__buttonBox:first-child {
+  margin-left: 5px;
+}
+.adminNav__buttonBox:last-child {
+  margin-right: 5px;
 }
 .adminNav__button {
   display: flex;
@@ -742,7 +796,6 @@ a {
   color: #fff;
   background-color: transparent;
   font-size: 2.4rem;
-  margin: 5px;
   cursor: pointer;
   transition: all 0.4s;
   border-radius: 50%;
@@ -768,30 +821,57 @@ a {
   background-color: transparent;
 }
 
-.navDash__container {
+.navDash__grid {
   width: max-content;
-  height: 6.6rem;
-  display: flex;
-  justify-content: center;
+  height: 7rem;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  column-gap: 4rem;
   align-items: center;
-  column-gap: 2rem;
+  justify-content: center;
   border-radius: 1000px;
   background-color: rgba(255, 255, 255, 0.5);
   z-index: 3;
+}
+.navDash__grid-admin {
+  width: max-content;
+  height: 7rem;
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  column-gap: 4rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1000px;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 3;
+}
+.navDash__buttonBox {
+  height: 6rem;
+  width: 6rem;
+}
+.navDash__buttonBox:first-child {
+  margin-left: 5px;
+}
+.navDash__buttonBox:last-child {
+  margin-right: 5px;
+}
+.navDash__userButtonBox {
+  position: relative;
+  z-index: 2;
 }
 .navDash__button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 6rem;
-  height: 6rem;
+  width: 100%;
+  height: 100%;
   color: #fff;
   background-color: transparent;
   font-size: 2.4rem;
-  margin: 5px;
   cursor: pointer;
   transition: all 0.4s;
   border-radius: 50%;
+  z-index: 2;
 }
 .navDash__button-label {
   width: 24px;
@@ -1114,12 +1194,17 @@ a {
   justify-items: center;
 }
 .login__form-container {
+  grid-column: 2/3;
+  grid-row: 1/6;
+  align-self: center;
+  justify-self: center;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 350px;
   width: 340px;
   background-color: #82828a;
+  border-radius: 6px;
 }
 .login__input {
   display: block;

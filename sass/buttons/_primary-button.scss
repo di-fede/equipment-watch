@@ -35,6 +35,10 @@
         width: 24rem;
         font-size: 2rem;
     }
+
+    @media screen and (max-width: 360px) {
+        font-size: 1.8rem;
+    }
 }
 
 .buttonPrimary__dash {
