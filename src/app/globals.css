@@ -406,7 +406,7 @@ a {
 }
 @media screen and (max-width: 500px) {
   .header {
-    grid-template-rows: 10rem min-content;
+    grid-template-rows: 10rem;
   }
 }
 .header__subTitle {
@@ -422,7 +422,7 @@ a {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 20rem;
+  height: 15rem;
   opacity: 0.9;
   pointer-events: none;
 }
@@ -975,7 +975,7 @@ a {
 }
 
 .equipment__bottom-container {
-  grid-row: 2/4;
+  grid-row: 2/7;
   width: 95%;
   height: 100%;
   display: flex;
@@ -1021,21 +1021,13 @@ a {
   color: #000;
   border: none;
   font-size: 2rem;
-}
-
-.snaps-inline {
-  scroll-snap-type: inline mandatory;
-  scroll-padding-inline: 1rem;
-}
-
-.snaps-inline > * {
-  scroll-snap-align: start;
+  border-radius: 6px;
 }
 
 .equipment__main {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: minmax(20rem, 20%) 20% 60%;
+  grid-template-rows: repeat(6, 1fr);
   align-items: center;
   justify-items: center;
   width: 100%;
@@ -1077,7 +1069,7 @@ a {
   justify-content: center;
   padding: 2.6rem;
   color: #fff;
-  border: 1px solid #82828a;
+  border: 2px solid #24ade8;
   background-color: #414042;
 }
 .equipment__box {
@@ -1138,12 +1130,9 @@ a {
   container-type: inline-size;
 }
 
-.form__element label {
-  font-size: clamp(2rem, 5cqi + 0.5rem, 3rem);
-}
-
 .formInput {
   width: 100%;
+  container-type: inline-size;
 }
 .formInput__heading {
   justify-self: center;
@@ -1166,6 +1155,7 @@ a {
   height: 100%;
   letter-spacing: 1.5px;
   padding-left: 2rem;
+  font-size: clamp(2rem, 8cqi + 0.5rem, 3rem);
 }
 
 .backBlue {
@@ -1186,8 +1176,8 @@ a {
   width: 100%;
 }
 .additionalInfo__label {
-  font-size: 2rem;
-  color: white;
+  font-size: 2.2rem;
+  color: #414042;
 }
 
 .login__form {
@@ -1323,7 +1313,8 @@ a {
 }
 .manualForm__field {
   height: 5rem;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
+  color: #000;
 }
 @media screen and (max-width: 600px) {
   .manualForm__field {
@@ -1333,7 +1324,7 @@ a {
 }
 .manualForm__label {
   color: #fff;
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 @media screen and (max-width: 600px) {
   .manualForm__label {

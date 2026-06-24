@@ -1,8 +1,17 @@
 "use client";
+import { Montserrat } from "next/font/google";
 import Electrical from "../../_form-sections/electrical";
 import Mechanical from "../../_form-sections/mechanical";
 import Physical from "../../_form-sections/physical";
 import TreadmillIssue from "./treadmill-issue";
+
+const montserrat = Montserrat({
+    style: ["normal"],
+    subsets: ["latin"],
+    weight: ["400"],
+});
+
+const mont = montserrat.className;
 
 export default function FormTreadmill() {
     const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
@@ -48,7 +57,10 @@ export default function FormTreadmill() {
                 <TreadmillIssue />
             </div>
             <div className="form__input-additional">
-                <label className="additionalInfo__label" htmlFor="message">
+                <label
+                    className={`additionalInfo__label ${mont}`}
+                    htmlFor="message"
+                >
                     Other/Additional Info
                 </label>
                 <textarea
@@ -59,7 +71,7 @@ export default function FormTreadmill() {
                     cols={50}
                 ></textarea>
             </div>
-            <button type="submit" className="submit">
+            <button type="submit" className={`submit ${mont}`}>
                 Submit
             </button>
         </form>

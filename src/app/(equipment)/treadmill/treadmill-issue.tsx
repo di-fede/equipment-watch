@@ -85,7 +85,7 @@ export default function TreadmillIssue() {
 
     return (
         <div id="form-electrical" className=" form__element media-element">
-            <div className={`formInput__heading ${mont}`}>Treadmill Issue</div>
+            {/* <div className={`formInput__heading ${mont}`}>Treadmill Issue</div> */}
             <div className={`formInput__grid ${barl}`}>
                 {issueItems.map((item) => (
                     <div key={item.value} className="formInput">

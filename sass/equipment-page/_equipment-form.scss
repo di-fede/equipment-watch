@@ -1,5 +1,5 @@
 .equipment__bottom-container {
-    grid-row: 2/4;
+    grid-row: 2/7;
     width: 95%;
     height: 100%;
     display: flex;
@@ -48,13 +48,14 @@
     color: #000;
     border: none;
     font-size: 2rem;
+    border-radius: 6px;
 }
 
-.snaps-inline {
-    scroll-snap-type: inline mandatory;
-    scroll-padding-inline: 1rem;
-}
+// .snaps-inline {
+//     scroll-snap-type: inline mandatory;
+//     scroll-padding-inline: 1rem;
+// }
 
-.snaps-inline > * {
-    scroll-snap-align: start;
-}
+// .snaps-inline > * {
+//     scroll-snap-align: start;
+// }

@@ -2,7 +2,7 @@
     &__main {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: minmax(20rem, 20%) 20% 60%;
+        grid-template-rows: repeat(6, 1fr);
         align-items: center;
         justify-items: center;
         width: 100%;

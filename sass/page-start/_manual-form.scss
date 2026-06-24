@@ -40,7 +40,8 @@
 
     &__field {
         height: 5rem;
-        font-size: 1.8rem;
+        font-size: 2.2rem;
+        color: $color-dark;
 
         @media screen and (max-width: 600px) {
             grid-column: 1/2;
@@ -50,7 +51,7 @@
 
     &__label {
         color: $color-white;
-        font-size: 2rem;
+        font-size: 2.2rem;
 
         @media screen and (max-width: 600px) {
             grid-column: 1/2;
