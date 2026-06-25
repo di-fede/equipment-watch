@@ -65,18 +65,16 @@ a {
 }
 
 .backToScan {
+  grid-column: 1/2;
+  grid-row: 1/2;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.6rem;
-  position: absolute;
-  left: 4px;
-  top: 50%;
   width: 6rem;
   height: 6rem;
   border-radius: 1000px;
   background-color: #fff;
-  transform: translate(0, -50%);
   opacity: 0;
   transition: all 0.3s;
 }
@@ -96,7 +94,7 @@ a {
 
 .backButtonShow {
   opacity: 1;
-  transform: translate(-70px, -50%);
+  transform: translateX(-50px);
 }
 
 .logout__button {
@@ -768,12 +766,11 @@ a {
 }
 .adminNav__container {
   width: max-content;
-  height: 7rem;
   display: grid;
   grid-template-columns: repeat(3, max-content);
   justify-content: center;
   align-items: center;
-  column-gap: 4rem;
+  column-gap: 2rem;
   border-radius: 1000px;
   background-color: rgba(255, 255, 255, 0.5);
   z-index: 3;
@@ -781,12 +778,7 @@ a {
 .adminNav__buttonBox {
   height: 6rem;
   width: 6rem;
-}
-.adminNav__buttonBox:first-child {
-  margin-left: 5px;
-}
-.adminNav__buttonBox:last-child {
-  margin-right: 5px;
+  margin: 5px;
 }
 .adminNav__button {
   display: flex;
@@ -824,10 +816,9 @@ a {
 
 .navDash__grid {
   width: max-content;
-  height: 7rem;
   display: grid;
   grid-template-columns: repeat(2, max-content);
-  column-gap: 4rem;
+  column-gap: 2rem;
   align-items: center;
   justify-content: center;
   border-radius: 1000px;
@@ -836,10 +827,9 @@ a {
 }
 .navDash__grid-admin {
   width: max-content;
-  height: 7rem;
   display: grid;
   grid-template-columns: repeat(3, max-content);
-  column-gap: 4rem;
+  column-gap: 2rem;
   align-items: center;
   justify-content: center;
   border-radius: 1000px;
@@ -849,16 +839,15 @@ a {
 .navDash__buttonBox {
   height: 6rem;
   width: 6rem;
-}
-.navDash__buttonBox:first-child {
-  margin-left: 5px;
-}
-.navDash__buttonBox:last-child {
-  margin-right: 5px;
+  margin: 5px;
 }
 .navDash__userButtonBox {
   position: relative;
   z-index: 2;
+}
+.navDash__scanButtonBox {
+  grid-column: 1/2;
+  grid-row: 1/2;
 }
 .navDash__button {
   display: flex;

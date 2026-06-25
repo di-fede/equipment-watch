@@ -25,13 +25,13 @@ export default function NavDash({
 
     return (
         <div className="mainNav__container">
-            <ButtonProvider link="/">
-                <BackButton />
-            </ButtonProvider>
             <div
                 className={`${isAdmin ? "navDash__grid-admin" : "navDash__grid"} ${barlow.className}`}
             >
-                <div className="navDash__buttonBox">
+                <ButtonProvider link="/">
+                    <BackButton />
+                </ButtonProvider>
+                <div className="navDash__buttonBox navDash__scanButtonBox">
                     <Link
                         href={"/"}
                         onClick={() => {
