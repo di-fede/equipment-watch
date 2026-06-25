@@ -14,7 +14,7 @@ const montserrat = Montserrat({
 const mont = montserrat.className;
 
 export default function FormTreadmill() {
-    const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         const formData = new FormData(e.currentTarget);
