@@ -8,8 +8,30 @@
         align-items: center;
         column-gap: 2rem;
         border-radius: 1000px;
-        background-color: rgba($color: #fff, $alpha: 0.5);
+        background-color: rgba($color: #fff, $alpha: 0.3);
         z-index: 3;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            border-radius: inherit;
+            // border: 1px solid white;
+            background: linear-gradient(
+                to bottom right,
+                #fff -500%,
+                transparent 62%,
+                #fff 400%
+            );
+            mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            padding: 4px;
+            pointer-events: none;
+        }
     }
 
     &__buttonBox {

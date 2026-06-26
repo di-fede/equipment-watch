@@ -15,6 +15,9 @@ export default function BottomNavContainer() {
     function handleShowLogout() {
         setShowLogout(!showLogout);
     }
+    function hideLogout() {
+        setShowLogout(false);
+    }
 
     const showNavAdmin = pathname?.startsWith("/admin");
 
@@ -33,6 +36,7 @@ export default function BottomNavContainer() {
                             <NavDash
                                 showLogout={showLogout}
                                 handleShowLogout={handleShowLogout}
+                                hideLogout={hideLogout}
                             />
                         )}
                     </div>

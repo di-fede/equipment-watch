@@ -14,9 +14,11 @@ const barlow = Barlow_Condensed({
 export default function NavDash({
     showLogout,
     handleShowLogout,
+    hideLogout,
 }: {
     showLogout: boolean;
     handleShowLogout: () => void;
+    hideLogout: () => void;
 }) {
     const [scanSelected, setScanSelected] = useState(Boolean(true));
     const [usersSelected, setUsersSelected] = useState(Boolean);
@@ -38,6 +40,7 @@ export default function NavDash({
                             setScanSelected(true);
                             setUsersSelected(false);
                             setAdminSelected(false);
+                            hideLogout();
                         }}
                         className={`navDash__button ${scanSelected ? "button-selected" : ""}`}
                     >
@@ -88,6 +91,7 @@ export default function NavDash({
                                 setAdminSelected(true);
                                 setScanSelected(false);
                                 setUsersSelected(false);
+                                hideLogout();
                             }}
                             className={`navDash__button ${adminSelected ? "button-selected" : ""}`}
                         >
